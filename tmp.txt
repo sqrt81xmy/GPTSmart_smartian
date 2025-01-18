@@ -1,0 +1,20 @@
+sol = []
+    for func in funs:
+        for obj in ast['children']:
+            if(obj['name'] == 'FunctionDefinition'):
+                if('name' in obj['attributes'].keys() and obj['attributes']['name'] == func):
+                    src = obj['src']
+                    indexes = src.split(':')
+                    startInd = int(indexes[0])
+                    length = int(indexes[1])
+                    sol.append(source_code[startInd:startInd+length])
+    for vari in varis:
+        for obj in ast['children']:
+            if(obj['name'] == 'VariableDeclaration'):
+                if ('name' in obj['attributes'].keys() and obj['attributes']['name'] == func):
+                    src = obj['src']
+                    indexes = src.split(':')
+                    startInd = int(indexes[0])
+                    length = int(indexes[1])
+                    sol.append(source_code[startInd:startInd + length])
+    solcs.append(sol)

@@ -1,0 +1,17 @@
+```json
+{
+  "function_names": [
+    "redeem",
+    "withdraw",
+    "Command"
+  ],
+  "dataflow": [
+    "redeem->withdraw",
+    "redeem->Command"
+  ],
+  "sequence": [
+    "redeem(1 ether),withdraw()",
+    "redeem(1 ether),Command(0x7a617c2B05d2A74Ff9bABC9d81E5225C1e01004b,[])"
+  ]
+}
+```

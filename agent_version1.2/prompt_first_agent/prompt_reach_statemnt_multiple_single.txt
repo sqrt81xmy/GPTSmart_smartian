@@ -1,0 +1,51 @@
+This is the solidity file.
+
+`${solidityFile}`
+
+And this is a json object called `candidateFunc`, it contains two objects, one is function name in the solidity file called `functionName`,
+and the other is the statements array called `block_first_statement` which each element is the statement in this function .
+
+`${candidateFunc}`
+
+You should go through this object's `block_first_statement` statement array, for each statement `stm` ,
+try to design a function call sequence to help the execute program to reach this statement `stm` in the `functionName`.
+
+The definition of a function call sequence is the format as below:
+`[a(86,87,32),b(),c()]`, where a b and c are functions so the sequence is the array of function call,
+the content in the parentheses are the parameters,
+each element in your sequence should follow the call format of the function where
+function should take the parameters according to the function definition in the solidity file.
+The function sequence you designed will be called in the order of the sequence.
+
+When you designed the function sequence, you should carefully read the statements before the statement that you will reach,
+and you should consider these important tips that I will tell you,
+which is:
+1. if there is some branch statement before `stm`, you should satisfy or dissatisfy the condition in the branch statement,
+or you can even ignore the branch only if it makes no influence for reaching the statement.
+If the condition dose have the influence, you should consider it carefully.
+If the condition uses the variable that is not in this function, you should find where you can change this variable in other functions,
+but, you should remember, you cannot call a `internal` or `private` function, but you can call the other function which can call the `internal` or `private` function.
+If the condition uses the arguments of this function, you should consider, how to design the parameter to satisfy the condition,
+as for the parameter,
+first, you should make sure that your designed parameter must satisfy the parameter type of the function, for example, if the parameter is `uint32 amount`,
+your amount parameter must be `uint32`, like `591`.
+second, you should design the `msg.value` as another parameter, if the function does not use the `msg.value`, just make `msg.value` 0.
+third, you should design the `msg.sender` as another parameter, you can choose the value from these four values, which is `NormalUser1,NormalUser2,NormalUser3,TargetOwner`.
+By the way, `address(this)` appears in the function is `TARG_CONTRACT`, you can use this as the parameter, but it is not used for the `msg.sender`.
+By the way, you can only use these values for the `address` type of the parameter, `NormalUser1,NormalUser2,NormalUser3,TargetOwner,TARG_CONTRACT`.
+Note, you should add the `msg.value` and the `msg.sender` to the parameter list, where you should put the `msg.value` as parameter[0], and put the `msg.sender` as parameter[1].
+For example, if one function in your sequence is `transfer(12,100)`, and your designed `msg.value` and `msg.sender` are 100 and NormalUser1. The changed function is `transfer(100,NormalUser1,12,100)`
+
+Note, all the state variables in the contract are init as 0, and `bool` type variables are init as `false`, before they are init by the constructor.
+
+2.if there is a function call before `stm`, you need to make sure that the called function executes and returns correctly without crashing.
+which means you should also read the called function code, and make sure it can execute without error or revert by designing which may add other functions, but you can do nothing if it can execute without error.
+Not crashing here means not entering the revert statement and meet all the `require` or `alert` statements.
+
+So you can just change the candidateFunc, you should add a key called `sequences`, the object corresponding the key should be an array,
+for any i less than `block_first_statement`.length, sequences[i] should reach the block_first_statement[i];
+
+
+Return the changed statementArray to me.
+
+

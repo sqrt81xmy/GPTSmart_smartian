@@ -1,0 +1,27 @@
+{
+  "functions": [
+    "tokens_buy",
+    "withdraw",
+    "change_token_price",
+    "change_active"
+  ],
+  "dataflow": [
+    "tokens_buy->withdraw->onlyOwner",
+    "tokens_buy->withdraw->change_token_price->onlyOwner",
+    "tokens_buy->withdraw->change_active->onlyOwner"
+  ],
+  "sequence": [
+    "tokens_buy(1)",
+    "withdraw(1)",
+    "onlyOwner(1)",
+    "tokens_buy(1)",
+    "withdraw(1)",
+    "change_token_price(1)",
+    "onlyOwner(1)",
+    "tokens_buy(1)",
+    "withdraw(1)",
+    "change_active(1)",
+    "onlyOwner(1)"
+  ]
+}
+['"tokens_buy(1)",\n    "withdraw(1)",\n    "onlyOwner(1)",\n    "tokens_buy(1)",\n    "withdraw(1)",\n    "change_token_price(1)",\n    "onlyOwner(1)",\n    "tokens_buy(1)",\n    "withdraw(1)",\n    "change_active(1)",\n    "onlyOwner(1)"']

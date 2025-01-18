@@ -1,0 +1,31 @@
+```json
+{
+  "functions": [
+    "getBlocksPerRound",
+    "getTicketPrice",
+    "getRoundIndex",
+    "getIsCashed",
+    "calculateWinner",
+    "getDecisionBlockNumber",
+    "getSubpotsCount",
+    "getSubpot",
+    "cash",
+    "getHashOfBlock",
+    "getBuyers",
+    "getTicketsCountByBuyer",
+    "getPot"
+  ],
+  "dataflow": [
+    "getRoundIndex->cash->calculateWinner",
+    "getRoundIndex->cash->getDecisionBlockNumber",
+    "getRoundIndex->cash->getSubpotsCount",
+    "getRoundIndex->cash->getSubpot"
+  ],
+  "sequence": [
+    "getRoundIndex(),cash(1,0),calculateWinner(1,0)",
+    "getRoundIndex(),cash(1,0),getDecisionBlockNumber(1,0)",
+    "getRoundIndex(),cash(1,0),getSubpotsCount(1)",
+    "getRoundIndex(),cash(1,0),getSubpot(1)"
+  ]
+}
+```

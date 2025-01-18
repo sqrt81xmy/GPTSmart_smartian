@@ -1,0 +1,122 @@
+{ Transactions =
+   [|{ FuncSpec = { Name = "constructor"
+                    Signature = [||]
+                    Kind = Constructor
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 0UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "go"
+                    Signature = [|15uy; 89uy; 248uy; 58uy|]
+                    Kind = Normal
+                    Payable = true
+                    OnlyOwner = false
+                    Entry = 78UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "owner"
+                    Signature = [|141uy; 165uy; 203uy; 91uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 88UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser3
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "fallback"
+                    Signature = [||]
+                    Kind = Fallback
+                    Payable = true
+                    OnlyOwner = false
+                    Entry = 0UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L }|]
+  TXCursor = 0 }

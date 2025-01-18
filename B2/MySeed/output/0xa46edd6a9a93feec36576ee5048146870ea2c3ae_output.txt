@@ -1,0 +1,6 @@
+{
+    "functions": ["transfer"],
+    "dataflow": ["transfer->caddress.call"],
+    "sequence": ["transfer(address from,address caddress,address[] _tos,uint[] v),caddress.call(id,from,_tos[i],v[i)"]
+}
+['"transfer(address from,address caddress,address[']

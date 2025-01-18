@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "D:\llmAuditExe\main.py", line 26, in <module>
+    completion = openai.chat.completions.create(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_utils\_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+  File "D:\Program Files\Python38\Lib\site-packages\openai\resources\chat\completions.py", line 829, in create
+    return self._post(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1278, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 955, in request
+    return self._request(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1044, in _request
+    return self._retry_request(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1093, in _retry_request
+    return self._request(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1044, in _request
+    return self._retry_request(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1093, in _retry_request
+    return self._request(
+  File "D:\Program Files\Python38\Lib\site-packages\openai\_base_client.py", line 1059, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: <html>
+
+<head><title>504 Gateway Time-out</title></head>
+
+<body>
+
+<center><h1>504 Gateway Time-out</h1></center>
+
+<hr><center>nginx</center>
+
+</body>
+
+</html>

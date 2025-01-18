@@ -1,0 +1,13 @@
+```json
+{
+  "functions": [
+    "callAddress"
+  ],
+  "dataflow": [
+    "callAddress->callAddress"
+  ],
+  "sequence": [
+    "callAddress(1),callAddress(1)"
+  ]
+}
+```

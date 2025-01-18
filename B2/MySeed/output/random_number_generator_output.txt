@@ -1,0 +1,12 @@
+{
+    "functions": [
+        "random"
+    ],
+    "dataflow": [
+        "random->random"
+    ],
+    "sequence": [
+        "random(1),random(1)"
+    ]
+}
+['"random(1),random(1)"']

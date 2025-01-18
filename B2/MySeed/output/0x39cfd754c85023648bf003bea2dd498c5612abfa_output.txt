@@ -1,0 +1,19 @@
+```json
+{
+  "functions": [
+    "initTokenBank",
+    "Deposit",
+    "WitdrawTokenToHolder",
+    "WithdrawToHolder"
+  ],
+  "dataflow": [
+    "Deposit->WitdrawTokenToHolder->WithdrawToHolder",
+    "Deposit->WithdrawToHolder"
+  ],
+  "sequence": [
+    "Deposit(),WitdrawTokenToHolder(1,0,1),WithdrawToHolder(1,1)",
+    "Deposit(),WithdrawToHolder(1,1)"
+  ]
+}
+```
+['"Deposit(),WitdrawTokenToHolder(1,0,1),WithdrawToHolder(1,1)",\n    "Deposit(),WithdrawToHolder(1,1)"']

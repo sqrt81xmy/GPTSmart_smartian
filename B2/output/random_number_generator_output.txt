@@ -1,0 +1,13 @@
+```json
+{
+  "function_names": [
+    "random"
+  ],
+  "dataflow": [
+    "random->random"
+  ],
+  "sequence": [
+    "random(10),random(10)"
+  ]
+}
+```

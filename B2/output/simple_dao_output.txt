@@ -1,0 +1,15 @@
+```json
+{
+  "functions": [
+    "donate",
+    "withdraw",
+    "queryCredit"
+  ],
+  "dataflow": [
+    "donate->withdraw->withdraw"
+  ],
+  "sequence": [
+    "donate(1),withdraw(1),withdraw(1)"
+  ]
+}
+```

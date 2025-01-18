@@ -1,0 +1,14 @@
+```json
+{
+  "function_names": [
+    "AirDropContract",
+    "transfer"
+  ],
+  "dataflow": [
+    "AirDropContract->transfer"
+  ],
+  "sequence": [
+    "AirDropContract(),transfer(1,1,1)"
+  ]
+}
+```

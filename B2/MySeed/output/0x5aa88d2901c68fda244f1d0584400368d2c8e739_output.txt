@@ -1,0 +1,6 @@
+{
+    "functions": ["withdraw()", "Command(address adr,bytes data)", "multiplicate(address adr)"],
+    "dataflow": ["Command(address adr,bytes data)->adr.call.value(msg.value)", "multiplicate(address adr)->adr.transfer(this.balance+msg.value)"],
+    "sequence": ["Command(adr,0),adr.call.value(msg.value)", "multiplicate(adr),adr.transfer(this.balance+msg.value)"]
+}
+['"Command(adr,0),adr.call.value(msg.value)", "multiplicate(adr),adr.transfer(this.balance+msg.value)"']

@@ -1,0 +1,44 @@
+```json
+{
+  "functions": [
+    "DranMe",
+    "getLength",
+    "setSecret",
+    "getPlayerCount",
+    "getPrize",
+    "becomePlayer",
+    "manipulateSecret",
+    "unlockSecret",
+    "callFirstTarget",
+    "callSecondTarget",
+    "setSeed",
+    "addSeed",
+    "guessSeed",
+    "checkSecret",
+    "winPrize",
+    "claimPrize"
+  ],
+  "dataflow": [
+    "becomePlayer->manipulateSecret->unlockSecret",
+    "becomePlayer->callFirstTarget",
+    "becomePlayer->callSecondTarget",
+    "becomePlayer->setSeed",
+    "becomePlayer->addSeed",
+    "becomePlayer->guessSeed",
+    "becomePlayer->checkSecret",
+    "setSecret->checkSecret",
+    "unlockSecret->claimPrize"
+  ],
+  "sequence": [
+    "becomePlayer(0.02 ether),manipulateSecret(0.01 ether),unlockSecret()",
+    "becomePlayer(0.02 ether),callFirstTarget(0.005 ether)",
+    "becomePlayer(0.02 ether),callSecondTarget(0.005 ether)",
+    "becomePlayer(0.02 ether),setSeed(0,1)",
+    "becomePlayer(0.02 ether),addSeed(1)",
+    "becomePlayer(0.02 ether),guessSeed(1)",
+    "becomePlayer(0.02 ether),checkSecret(0.01 ether)",
+    "setSecret(1),checkSecret(0.01 ether)",
+    "unlockSecret(),claimPrize()"
+  ]
+}
+```

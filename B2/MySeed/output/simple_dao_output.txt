@@ -1,0 +1,45 @@
+Here is the analysis of the `SimpleDAO` contract based on the provided requirements:
+
+1. **List of Function Names**:
+   ```json
+   [
+     "donate",
+     "withdraw",
+     "queryCredit"
+   ]
+   ```
+
+2. **Dataflow**:
+   - The `donate` function modifies the `credit` mapping for the `to` address.
+   - The `withdraw` function checks the `credit` mapping for `msg.sender` to ensure that the amount to withdraw is available.
+   - The `queryCredit` function reads the `credit` mapping for a specified address but does not modify it.
+
+   The dataflow can be represented as:
+   - `donate -> withdraw`
+
+3. **Generated Sequences**:
+   - The sequence of function calls based on the dataflow found is:
+   ```json
+   [
+     "donate(1), withdraw(1)"
+   ]
+   ```
+
+Here is the complete result in JSON format:
+
+```json
+{
+  "functions": [
+    "donate",
+    "withdraw",
+    "queryCredit"
+  ],
+  "dataflow": [
+    "donate -> withdraw"
+  ],
+  "sequence": [
+    "donate(1), withdraw(1)"
+  ]
+}
+```
+['"donate(1), withdraw(1)"']

@@ -1,0 +1,18 @@
+```json
+{
+  "functions": [
+    "Owned",
+    "changeOwner",
+    "acceptOwnership",
+    "execute",
+    "numberOfIndex",
+    "writeIndex"
+  ],
+  "dataflow": [
+    "writeIndex->numberOfIndex"
+  ],
+  "sequence": [
+    "writeIndex(1, 'address1', 'names1', 1, 1), numberOfIndex()"
+  ]
+}
+```

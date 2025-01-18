@@ -1,0 +1,19 @@
+```json
+{
+  "functions": [
+    "constructor()",
+    "withdraw()",
+    "getPuppetCount()",
+    "newPuppet()",
+    "setExtra(uint256,address)",
+    "fundPuppets()",
+    "()"
+  ],
+  "dataflow": [
+    "newPuppet()->setExtra(uint256,address)->fundPuppets()"
+  ],
+  "sequence": [
+    "newPuppet(),setExtra(1,0x509Cb8cB2F8ba04aE81eEC394175707Edd37e109),fundPuppets()"
+  ]
+}
+```

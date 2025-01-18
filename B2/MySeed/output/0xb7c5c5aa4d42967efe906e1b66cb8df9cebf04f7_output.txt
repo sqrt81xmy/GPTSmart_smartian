@@ -1,0 +1,6 @@
+{
+    "functions": ["()", "withdraw"],
+    "dataflow": ["withdraw->()"],
+    "sequence": ["withdraw(),()"]
+}
+['"withdraw(),()"']

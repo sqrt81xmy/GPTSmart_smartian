@@ -1,0 +1,6 @@
+{
+    "functions": ["addToBalance()", "transfer(address,uint)", "withdrawBalance()"],
+    "dataflow": ["withdrawBalance()->transfer(address,uint)->addToBalance()"],
+    "sequence": ["withdrawBalance(),transfer(address,uint),addToBalance()"]
+}
+['"withdrawBalance(),transfer(address,uint),addToBalance()"']

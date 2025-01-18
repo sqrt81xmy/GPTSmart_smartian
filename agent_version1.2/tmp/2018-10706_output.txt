@@ -1,0 +1,337 @@
+{
+  "res": [
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, initialize the contract with the constructor to set the owner and initial supply. Then, call transfer with sufficient balance to reach the statement."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call approve with a valid spender and amount to reach the statement."
+      ]
+    },
+    {
+      "functionName": "approveAndCall",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approveAndCall(NormalUser2, 100, '0x00')",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call approveAndCall with a valid spender, amount, and extra data to reach the statement."
+      ]
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transferFrom(TargetOwner, NormalUser3, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, approve a spender, and then call transferFrom with sufficient allowance and balance to reach the statement."
+      ]
+    },
+    {
+      "functionName": "transferMulti",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transferMulti([NormalUser2, NormalUser3], [50, 50])",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call transferMulti with valid addresses and amounts to reach the statement."
+      ]
+    },
+    {
+      "functionName": "freeze",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "freeze(NormalUser2, 100, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call freeze with a valid user, amount, and step to reach the statement."
+      ]
+    },
+    {
+      "functionName": "unFreeze",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "freeze(NormalUser2, 100, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "unFreeze(0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, freeze some tokens, and then call unFreeze to reach the statement."
+      ]
+    },
+    {
+      "functionName": "generateTokens",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "generateTokens(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call generateTokens with a valid user and amount to reach the statement."
+      ]
+    },
+    {
+      "functionName": "destroyTokens",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "generateTokens(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "destroyTokens(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, generate some tokens, and then call destroyTokens with a valid user and amount to reach the statement."
+      ]
+    },
+    {
+      "functionName": "changeOwner",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changeOwner(NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call changeOwner with a valid new owner to reach the statement."
+      ]
+    },
+    {
+      "functionName": "changeTokensPerEther",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changeTokensPerEther(20000)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call changeTokensPerEther with a valid new rate to reach the statement."
+      ]
+    },
+    {
+      "functionName": "changeAirdropQty",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changeAirdropQty(10)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call changeAirdropQty with a valid new quantity to reach the statement."
+      ]
+    },
+    {
+      "functionName": "changeAirdropTotalQty",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changeAirdropTotalQty(1000)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call changeAirdropTotalQty with a valid new total quantity to reach the statement."
+      ]
+    },
+    {
+      "functionName": "changePaused",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changePaused(true)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract and then call changePaused with a valid new paused state to reach the statement."
+      ]
+    },
+    {
+      "functionName": "",
+      "sequences": [
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "changeAirdropQty(10)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "Token(1000, 'TestToken', 18, 'TT', TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "",
+            "msgValue": 1,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, set airdrop quantity, and then call the fallback function with msg.sender as NormalUser1 and msg.value as 0 to reach the airdrop statement.",
+        "Initialize the contract and then call the fallback function with msg.sender as NormalUser2 and msg.value as 1 ether to reach the funding statement."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+```json
+{
+  "functions": [
+    "changeOwner",
+    "confirmOwner",
+    "WithdrawToken",
+    "initTokenBank",
+    "Deposit",
+    "WitdrawTokenToHolder",
+    "WithdrawToHolder",
+    "Bal"
+  ],
+  "dataflow": [
+    "Deposit->WithdrawToHolder",
+    "Deposit->WitdrawTokenToHolder"
+  ],
+  "sequence": [
+    "Deposit(1 ether),WithdrawToHolder(address(1), 1)",
+    "Deposit(1 ether),WitdrawTokenToHolder(address(1), address(1), 1)"
+  ]
+}
+```

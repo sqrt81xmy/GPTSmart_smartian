@@ -1,0 +1,15 @@
+{
+    "functions": [
+        "withdrawAll()",
+        "deposit()"
+    ],
+    "dataflow": [
+        "withdrawAll()->msg.sender.call",
+        "deposit()->credit[msg.sender]"
+    ],
+    "sequence": [
+        "deposit(1)",
+        "withdrawAll()"
+    ]
+}
+['"deposit(1)",\n        "withdrawAll()"']

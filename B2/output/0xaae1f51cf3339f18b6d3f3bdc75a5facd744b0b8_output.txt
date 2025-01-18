@@ -1,0 +1,17 @@
+```json
+{
+  "functions": [
+    "SetMinSum",
+    "SetLogFile",
+    "Initialized",
+    "Deposit",
+    "Collect"
+  ],
+  "dataflow": [
+    "SetMinSum->Initialized->Collect"
+  ],
+  "sequence": [
+    "SetMinSum(1),Initialized(),Collect(1)"
+  ]
+}
+```

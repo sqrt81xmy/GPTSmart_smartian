@@ -1,0 +1,18 @@
+```json
+{
+  "function_names": [
+    "tokens_buy",
+    "withdraw",
+    "change_token_price",
+    "change_active"
+  ],
+  "dataflow": [
+    "change_active->tokens_buy",
+    "change_token_price->tokens_buy"
+  ],
+  "sequence": [
+    "change_active(1),tokens_buy(1000000000000000000)",
+    "change_token_price(1000000000000000000),tokens_buy(1000000000000000000)"
+  ]
+}
+```

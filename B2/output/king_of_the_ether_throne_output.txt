@@ -1,0 +1,17 @@
+```json
+{
+  "function_names": [
+    "KingOfTheEtherThrone",
+    "numberOfMonarchs",
+    "claimThrone",
+    "sweepCommission",
+    "transferOwnership"
+  ],
+  "dataflow": [
+    "claimThrone->claimThrone"
+  ],
+  "sequence": [
+    "claimThrone(1),claimThrone(1)"
+  ]
+}
+```

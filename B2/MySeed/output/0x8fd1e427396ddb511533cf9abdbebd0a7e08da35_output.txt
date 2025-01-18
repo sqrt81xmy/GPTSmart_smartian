@@ -1,0 +1,20 @@
+```json
+{
+  "functions": [
+    "initTokenBank",
+    "Deposit",
+    "WitdrawTokenToHolder",
+    "WithdrawToHolder",
+    "Bal"
+  ],
+  "dataflow": [
+    "Deposit->WitdrawTokenToHolder->WithdrawToken",
+    "Deposit->WithdrawToHolder"
+  ],
+  "sequences": [
+    "Deposit(),WitdrawTokenToHolder(1,0,1),WithdrawToken(0,1)",
+    "Deposit(),WithdrawToHolder(1,1)"
+  ]
+}
+```
+No match found.

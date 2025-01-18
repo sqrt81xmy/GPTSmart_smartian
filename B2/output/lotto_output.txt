@@ -1,0 +1,14 @@
+```json
+{
+  "functions": [
+    "sendToWinner",
+    "withdrawLeftOver"
+  ],
+  "dataflow": [
+    "sendToWinner->withdrawLeftOver"
+  ],
+  "sequence": [
+    "sendToWinner(),withdrawLeftOver()"
+  ]
+}
+```

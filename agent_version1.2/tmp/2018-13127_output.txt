@@ -1,0 +1,336 @@
+{
+  "res": [
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in transfer function, we need to initialize the contract with DSPXToken constructor, then mint some tokens to NormalUser1, and finally call transfer function to transfer tokens from NormalUser1 to NormalUser2.",
+        "The second block is the Transfer event emission which is automatically executed after the transfer function completes successfully."
+      ]
+    },
+    {
+      "functionName": "balanceOf",
+      "sequences": [],
+      "reason": []
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in transferFrom function, we need to initialize the contract with DSPXToken constructor, mint some tokens to NormalUser1, approve NormalUser2 to spend tokens on behalf of NormalUser1, and finally call transferFrom function to transfer tokens from NormalUser1 to NormalUser3 by NormalUser2.",
+        "The second block involves updating the allowance of NormalUser2 after transferring tokens, which is automatically handled by the transferFrom function.",
+        "The third block is the Transfer event emission which is automatically executed after the transferFrom function completes successfully."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in approve function, we need to initialize the contract with DSPXToken constructor and then call approve function to allow NormalUser2 to spend tokens on behalf of NormalUser1.",
+        "The second block is the Approval event emission which is automatically executed after the approve function completes successfully."
+      ]
+    },
+    {
+      "functionName": "allowance",
+      "sequences": [],
+      "reason": []
+    },
+    {
+      "functionName": "increaseApproval",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "increaseApproval(NormalUser2, 10)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "increaseApproval(NormalUser2, 10)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in increaseApproval function, we need to initialize the contract with DSPXToken constructor, approve NormalUser2 to spend tokens on behalf of NormalUser1, and then call increaseApproval function to increase the allowance of NormalUser2.",
+        "The second block is the Approval event emission which is automatically executed after the increaseApproval function completes successfully."
+      ]
+    },
+    {
+      "functionName": "decreaseApproval",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 10)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 10)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "approve(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 10)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in decreaseApproval function, we need to initialize the contract with DSPXToken constructor, approve NormalUser2 to spend tokens on behalf of NormalUser1, and then call decreaseApproval function to decrease the allowance of NormalUser2.",
+        "The second block involves setting the allowance to 0 if the subtracted value is greater than the old value, which is handled by the decreaseApproval function.",
+        "The third block is the Approval event emission which is automatically executed after the decreaseApproval function completes successfully."
+      ]
+    },
+    {
+      "functionName": "mint",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block in mint function, we need to initialize the contract with DSPXToken constructor and then call mint function to mint tokens to NormalUser1.",
+        "The second block involves updating the total supply of tokens, which is automatically handled by the mint function.",
+        "The third block is the Transfer event emission which is automatically executed after the mint function completes successfully."
+      ]
+    },
+    {
+      "functionName": "unfreeze",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "unfreeze()",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the unfreeze function, we need to initialize the contract with DSPXToken constructor and then call unfreeze function by the team address to allow token transfers."
+      ]
+    }
+  ]
+}

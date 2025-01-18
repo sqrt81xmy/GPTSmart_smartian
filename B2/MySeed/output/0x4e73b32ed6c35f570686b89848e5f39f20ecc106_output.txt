@@ -1,0 +1,6 @@
+{
+    "functions": ["SetMinSum(uint256)", "SetLogFile(address)", "Initialized()", "Deposit()", "Collect(uint256)", ""],
+    "dataflow": ["Deposit->Collect"],
+    "sequence": ["Deposit(1),Collect(1)"]
+}
+['"Deposit(1),Collect(1)"']

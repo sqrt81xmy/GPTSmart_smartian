@@ -1,0 +1,15 @@
+```json
+{
+  "function_names": [
+    "GetFreebie",
+    "withdraw",
+    "Command"
+  ],
+  "dataflow": [
+    "GetFreebie->withdraw"
+  ],
+  "sequence": [
+    "GetFreebie(2 ether),withdraw()"
+  ]
+}
+```

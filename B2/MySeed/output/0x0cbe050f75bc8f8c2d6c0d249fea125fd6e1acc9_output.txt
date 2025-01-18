@@ -1,0 +1,6 @@
+{
+  "functions": ["callAddress(address)"],
+  "dataflow": ["callAddress->a.call()"],
+  "sequence": ["callAddress(address a),a.call()"]
+}
+['"callAddress(address a),a.call()"']

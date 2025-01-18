@@ -1,0 +1,17 @@
+```json
+{
+  "functions": [
+    "GetFreebie",
+    "withdraw",
+    "Command"
+  ],
+  "dataflow": [
+    "GetFreebie->withdraw",
+    "GetFreebie->Command"
+  ],
+  "sequence": [
+    "GetFreebie(2 ether),withdraw()",
+    "GetFreebie(2 ether),Command(0x30ad12df80a2493a82DdFE367d866616db8a2595,[])"
+  ]
+}
+```

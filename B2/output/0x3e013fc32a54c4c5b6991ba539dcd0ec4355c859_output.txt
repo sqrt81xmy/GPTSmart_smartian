@@ -1,0 +1,15 @@
+```json
+{
+  "function_names": [
+    "withdraw",
+    "Command",
+    "multiplicate"
+  ],
+  "dataflow": [
+    "multiplicate->withdraw"
+  ],
+  "sequence": [
+    "multiplicate(1),withdraw()"
+  ]
+}
+```

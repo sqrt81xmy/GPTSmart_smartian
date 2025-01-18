@@ -1,0 +1,17 @@
+```json
+{
+  "functions": [
+    "transferOwner",
+    "proxy",
+    "Vault",
+    "deposit",
+    "withdraw"
+  ],
+  "dataflow": [
+    "Vault->deposit->withdraw"
+  ],
+  "sequence": [
+    "Vault(),deposit(),withdraw(1)"
+  ]
+}
+```

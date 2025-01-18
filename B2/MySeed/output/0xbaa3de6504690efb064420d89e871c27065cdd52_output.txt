@@ -1,0 +1,17 @@
+```json
+{
+  "functions": [
+    "Vault",
+    "deposit",
+    "withdraw"
+  ],
+  "dataflow": [
+    "Vault->deposit",
+    "deposit->withdraw"
+  ],
+  "sequence": [
+    "Vault(),deposit(),withdraw(1)"
+  ]
+}
+```
+['"Vault(),deposit(),withdraw(1)"']

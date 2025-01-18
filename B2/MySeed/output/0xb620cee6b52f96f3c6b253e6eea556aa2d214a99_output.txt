@@ -1,0 +1,32 @@
+To analyze the `DrainMe` contract for data flows, we will identify how the variable `secret` is used across multiple functions. The variable `secret` is set in the `setSecret` function and is then used in the `guessSeed` and `checkSecret` functions. 
+
+### Data Flow Analysis
+1. **Data Flow**: 
+   - `setSecret` modifies `secret`
+   - `guessSeed` reads `secret`
+   - `checkSecret` reads `secret`
+
+### Data Flow Representation
+- **Data Flow**: `setSecret -> guessSeed -> checkSecret`
+
+### Function Call Sequence
+To implement this data flow, we can create a sequence of function calls. The parameters will be represented as specified (e.g., `1` for `uint256` parameters).
+
+- **Sequence**: `setSecret(1), guessSeed(1), checkSecret(1)`
+
+### JSON Output
+Here is the result in JSON format:
+
+```json
+{
+  "dataflow": [
+    "setSecret -> guessSeed -> checkSecret"
+  ],
+  "sequence": [
+    "setSecret(1), guessSeed(1), checkSecret(1)"
+  ]
+}
+``` 
+
+This output captures the identified data flow and the corresponding sequence of function calls that reflect the data dependencies.
+['"setSecret(1), guessSeed(1), checkSecret(1)"']

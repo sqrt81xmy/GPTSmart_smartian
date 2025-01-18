@@ -1,0 +1,14 @@
+{
+    "functions": ["depositFunds()", "withdrawFunds(uint256)"],
+    "dataflow": [
+        "depositFunds() -> withdrawFunds(uint256)",
+        "withdrawFunds(uint256) -> depositFunds() -> withdrawFunds(uint256)"
+    ],
+    "sequence": [
+        "depositFunds()",
+        "withdrawFunds(1)",
+        "depositFunds()",
+        "withdrawFunds(1)"
+    ]
+}
+['"depositFunds()",\n        "withdrawFunds(1)",\n        "depositFunds()",\n        "withdrawFunds(1)"']

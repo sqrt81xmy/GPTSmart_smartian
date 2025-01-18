@@ -1,0 +1,6 @@
+{
+  "functions": ["function() public payable", "function withdrawAll() public onlyOwner", "function withdraw(uint _value) public onlyOwner", "function sendMoney(address _target, uint _value) public onlyOwner"],
+  "dataflow": ["function() public payable->withdrawAll() public onlyOwner->withdraw(uint _value) public onlyOwner", "function() public payable->sendMoney(address _target, uint _value) public onlyOwner"],
+  "sequence": ["function() public payable(),withdrawAll(),withdraw(1)", "function() public payable(),sendMoney(address _target, uint _value)"]
+}
+['"function() public payable(),withdrawAll(),withdraw(1)", "function() public payable(),sendMoney(address _target, uint _value)"']

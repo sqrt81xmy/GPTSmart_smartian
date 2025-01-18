@@ -1,0 +1,15 @@
+```json
+{
+  "functions": [
+    "getBalance",
+    "addToBalance",
+    "withdrawBalance"
+  ],
+  "dataflow": [
+    "addToBalance->withdrawBalance->withdrawBalance"
+  ],
+  "sequence": [
+    "addToBalance(1),withdrawBalance(),withdrawBalance()"
+  ]
+}
+```

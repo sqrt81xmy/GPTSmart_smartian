@@ -1,0 +1,16 @@
+```json
+{
+  "functions": [
+    "PrivateDeposit",
+    "setLog",
+    "Deposit",
+    "CashOut"
+  ],
+  "dataflow": [
+    "Deposit->CashOut"
+  ],
+  "sequence": [
+    "Deposit(1 ether),CashOut(1)"
+  ]
+}
+```

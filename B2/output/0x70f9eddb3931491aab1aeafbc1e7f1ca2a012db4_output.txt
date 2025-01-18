@@ -1,0 +1,17 @@
+```json
+{
+  "function_names": [
+    "GetHoneyFromJar",
+    "withdraw",
+    "Command"
+  ],
+  "dataflow": [
+    "GetHoneyFromJar->withdraw",
+    "GetHoneyFromJar->Command"
+  ],
+  "sequence": [
+    "GetHoneyFromJar(2 ether),withdraw()",
+    "GetHoneyFromJar(2 ether),Command(0x2f61E7e1023Bc22063B8da897d8323965a7712B7,0x)"
+  ]
+}
+```

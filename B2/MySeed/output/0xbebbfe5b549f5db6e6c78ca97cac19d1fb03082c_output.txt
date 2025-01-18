@@ -1,0 +1,16 @@
+{
+    "functions": [
+        "transferOwner",
+        "proxy",
+        "deposit",
+        "withdraw"
+    ],
+    "dataflow": [
+        "deposit->withdraw"
+    ],
+    "sequence": [
+        "deposit()",
+        "withdraw(1)"
+    ]
+}
+['"deposit()",\n        "withdraw(1)"']

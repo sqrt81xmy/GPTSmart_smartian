@@ -1,0 +1,6 @@
+{
+    "functions": ["transfer"],
+    "dataflows": ["transfer->call"],
+    "sequences": ["transfer(address from,address caddress,address[] _tos,uint v),call(id,from,_tos[i],v)"]
+}
+No match found.

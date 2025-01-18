@@ -1,0 +1,14 @@
+```json
+{
+  "functions": [
+    "() payable",
+    "withdraw()"
+  ],
+  "dataflow": [
+    "() payable->withdraw()->() payable"
+  ],
+  "sequence": [
+    "() payable(1 ether),withdraw(),() payable(1 ether)"
+  ]
+}
+```

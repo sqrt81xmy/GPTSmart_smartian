@@ -1,0 +1,6 @@
+{
+    "functions": ["PrivateDeposit", "setLog", "Deposit", "CashOut"],
+    "dataflow": ["Deposit->balances", "CashOut->msg.sender", "CashOut->balances"],
+    "sequence": ["Deposit()", "CashOut(1)"]
+}
+['"Deposit()", "CashOut(1)"']

@@ -1,0 +1,6 @@
+{
+    "functions": ["withdrawBalance()"],
+    "dataflow": ["withdrawBalance()->msg.sender.send()"],
+    "sequence": ["withdrawBalance(1)"]
+}
+['"withdrawBalance(1)"']

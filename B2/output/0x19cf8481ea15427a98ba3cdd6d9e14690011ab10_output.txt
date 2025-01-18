@@ -1,0 +1,38 @@
+```json
+{
+  "functions": [
+    "daoPOLSKAtokens",
+    "setSupply",
+    "setotherchainstotalsupply",
+    "approveAndCall",
+    "burn",
+    "burnFrom",
+    "transfer",
+    "transferFrom",
+    "balanceOf",
+    "approve",
+    "allowance",
+    "setTokenInformation",
+    "setChainsAddresses",
+    "DAOPolskaTokenICOregulations",
+    "sendTokenAw",
+    "createDaoPOLSKAtokens",
+    "setBonusCreationRate",
+    "FundsTransfer",
+    "PartialFundsTransfer",
+    "turnrefund",
+    "fundingState",
+    "turnmigrate",
+    "finalize",
+    "migrate",
+    "refundTRA",
+    "preICOregulations"
+  ],
+  "dataflow": [
+    "createDaoPOLSKAtokens->migrate->refundTRA"
+  ],
+  "sequence": [
+    "createDaoPOLSKAtokens(1),migrate(1),refundTRA()"
+  ]
+}
+```

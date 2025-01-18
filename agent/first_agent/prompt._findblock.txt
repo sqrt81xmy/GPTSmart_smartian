@@ -1,0 +1,103 @@
+This is the solidity file which may contains multiple contracts, some of them may have some inherited relationships.
+
+`solidityFile`
+
+You should first know the definition of the function, The function is in the format like below:
+`function go() public payable` or `function tokens_buy() payable returns (bool)`or ` function callchecked(address callee) public` or  `function () payable`
+As you can see, the function should starts with the `function`.
+
+Your focus should be on each inherited or primitive function contained in the mainContract `mainContract`.
+
+Please first help me find the block in each function which your focus is on.
+
+To begin with, you should first know the definition of the function call, function call is to call the function that appears in the contract,
+and `function call` has the format like `transfer()` or the `obj.transfer()`, to summarize, a statement that contains parentheses is a function call.
+
+Here, a block is defined as a collection of statements that are separated by function branches or function calls,
+in other words, a set of statements has no other branch statements or no function call statements.
+There can only be one entry and one exit in this set,
+which the entry is the first statement of the collection, and the exit is the last statement of the collection.
+
+Here function branches contain the `if` statement and the `require` statement and the `alert` statement.
+
+Let me give you an example, so you can better understand what I mean.
+
+This is a function in the solidity file,
+
+`
+function _sell(address _from,uint256 amount) internal returns (uint256 revenue){
+    require(sellOpen);
+    require(!frozenAccount[_from]);
+    revenue = amount * 2;
+    revenue = revenue * 2;
+    require(amount>0);
+    require(sellPrice>0);
+    require(_from!=owner);
+    if(sellPrice<5){
+        amount = amount + 1;
+        if(sellPrice>6){
+            amount = amount + 2;
+            revenue = revenue +1;
+        }
+    }
+    srg = srg + 1;
+    kl = kl +1;
+    _transfer(_from,owner,amount);
+    revenue = amount * sellPrice;
+    amount = amount + 1;
+    amount = amount + 5;
+    _from.transfer(revenue);                     // sends ether to the seller: it's important to do this last to prevent recursion attacks
+    SellToken(_from,sellPrice,amount,revenue);
+    return revenue;                                   // ends function and returns
+}`
+
+Here is the blocks of the function:
+first block is
+`revenue = amount * 2;
+ revenue = revenue * 2;`
+because it is seperated by the branch statement `require` statement;
+second block is
+`
+amount = amount + 1;`
+because it is seperated by the branch statement `if` statement of `if(sellPrice<5)`;
+third block is
+` amount = amount + 2;
+revenue = revenue +1;`
+because it is seperated by the branch statement `if` statement of `if(sellPrice<5)`;
+forth block is
+`
+srg = srg + 1;
+kl = kl +1;
+`
+because it is seperated by the branch statement `if(sellPrice<5)` and the function call statement `_transfer(_from,owner,amount);`
+fifth block is
+`revenue = amount * sellPrice;
+amount = amount + 1;
+amount = amount + 5;
+`
+because it is seperated by the function calls which are `_transfer(_from,owner,amount);` and `_from.transfer(revenue);`.
+
+You should go through all the functions in the solidity file and find the blocks step by step.
+As you can see, your block should wrap with the branch statement or the function call statement,
+which means it should have the branch statement or function call statement both above and below it.
+
+After you find the blocks, you should return me both the block and the first statement in the block.
+
+For the above example,
+if you have found the block
+`
+amount = amount + 1;
+revenue = amount;`
+the first statement in the block is `amount = amount + 1;`
+
+In summarize, you should only return a JSON array `res`,  where each element contains four objects,
+for any i less than `res.length`
+first is the name of function[i], and the corresponding key is the `functionName`,
+second is the blocks array you find, and the corresponding key is the `block`,
+third is the first statement array for each block, and the corresponding key is the `block_first_statement`,
+so for any j less than `block`.length,  block_first_statement[j] is the first statement of the block[j],
+forth is the function call statement array, and the corresponding key is the `function_call_statement`,
+and this array contains all the function call statements in the function[i].
+
+NOTE: You do not need to contain all the statements of the functions in your result,
+and you block SHOULD NOT contain the `if` or `require` statements or function calls like `_transfer(_from,owner,amount);` and `_from.transfer(revenue);`.

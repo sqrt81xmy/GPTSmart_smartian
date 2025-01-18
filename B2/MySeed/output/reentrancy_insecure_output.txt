@@ -1,0 +1,12 @@
+{
+  "functions": ["addToBalance()", "withdrawBalance()"],
+  "dataflow": [
+    "addToBalance()->withdrawBalance()",
+    "withdrawBalance()->addToBalance()"
+  ],
+  "sequence": [
+    "addToBalance(1),withdrawBalance()",
+    "withdrawBalance(),addToBalance(1)"
+  ]
+}
+['"addToBalance(1),withdrawBalance()",\n    "withdrawBalance(),addToBalance(1)"']

@@ -1,0 +1,24 @@
+```json
+{
+  "functions": [
+    "LuckyDoubler",
+    "changeOwner",
+    "changeMultiplier",
+    "changeFee",
+    "multiplierFactor",
+    "currentFee",
+    "totalEntries",
+    "userStats",
+    "entryDetails",
+    "init",
+    "join",
+    "rand"
+  ],
+  "dataflow": [
+    "init->join->rand"
+  ],
+  "sequence": [
+    "init(),join(),rand(1)"
+  ]
+}
+```

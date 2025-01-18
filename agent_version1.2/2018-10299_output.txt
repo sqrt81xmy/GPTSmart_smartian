@@ -1,0 +1,245 @@
+To design the function call sequences for each `block_first_statement`, we need to carefully analyze the conditions and function calls that precede the target statement. We will ensure that the conditions are satisfied and that the function calls execute without reverting. Below is the modified `statementArray` with the `sequences` key added for each function.
+
+### Modified `statementArray` with `sequences`:
+
+```json
+[
+    {
+        "functionName": "transfer",
+        "block": [
+            "balances[msg.sender] = balances[msg.sender].sub(_value);",
+            "balances[_to] = balances[_to].add(_value);"
+        ],
+        "block_first_statement": [
+            "balances[msg.sender] = balances[msg.sender].sub(_value);",
+            "balances[_to] = balances[_to].add(_value);"
+        ],
+        "function_call_statement": [
+            "balances[msg.sender].sub(_value);",
+            "balances[_to].add(_value);",
+            "Transfer(msg.sender, _to, _value);"
+        ],
+        "sequences": [
+            [
+                {
+                    "functionName": "transfer(NormalUser2, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ],
+            [
+                {
+                    "functionName": "transfer(NormalUser3, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ]
+        ]
+    },
+    {
+        "functionName": "transferFrom",
+        "block": [
+            "balances[_from] = balances[_from].sub(_value);",
+            "balances[_to] = balances[_to].add(_value);",
+            "allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);"
+        ],
+        "block_first_statement": [
+            "balances[_from] = balances[_from].sub(_value);",
+            "balances[_to] = balances[_to].add(_value);",
+            "allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);"
+        ],
+        "function_call_statement": [
+            "balances[_from].sub(_value);",
+            "balances[_to].add(_value);",
+            "allowed[_from][msg.sender].sub(_value);",
+            "Transfer(_from, _to, _value);"
+        ],
+        "sequences": [
+            [
+                {
+                    "functionName": "approve(NormalUser2, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                },
+                {
+                    "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser2"
+                }
+            ],
+            [
+                {
+                    "functionName": "approve(NormalUser2, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                },
+                {
+                    "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser2"
+                }
+            ],
+            [
+                {
+                    "functionName": "approve(NormalUser2, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                },
+                {
+                    "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser2"
+                }
+            ]
+        ]
+    },
+    {
+        "functionName": "approve",
+        "block": [
+            "allowed[msg.sender][_spender] = _value;"
+        ],
+        "block_first_statement": [
+            "allowed[msg.sender][_spender] = _value;"
+        ],
+        "function_call_statement": [
+            "Approval(msg.sender, _spender, _value);"
+        ],
+        "sequences": [
+            [
+                {
+                    "functionName": "approve(NormalUser2, 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ]
+        ]
+    },
+    {
+        "functionName": "batchTransfer",
+        "block": [
+            "uint cnt = _receivers.length;",
+            "uint256 amount = uint256(cnt) * _value;",
+            "balances[msg.sender] = balances[msg.sender].sub(amount);",
+            "balances[_receivers[i]] = balances[_receivers[i]].add(_value);"
+        ],
+        "block_first_statement": [
+            "uint cnt = _receivers.length;",
+            "uint256 amount = uint256(cnt) * _value;",
+            "balances[msg.sender] = balances[msg.sender].sub(amount);",
+            "balances[_receivers[i]] = balances[_receivers[i]].add(_value);"
+        ],
+        "function_call_statement": [
+            "balances[msg.sender].sub(amount);",
+            "balances[_receivers[i]].add(_value);",
+            "Transfer(msg.sender, _receivers[i], _value);"
+        ],
+        "sequences": [
+            [
+                {
+                    "functionName": "batchTransfer([NormalUser2, NormalUser3], 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ],
+            [
+                {
+                    "functionName": "batchTransfer([NormalUser2, NormalUser3], 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ],
+            [
+                {
+                    "functionName": "batchTransfer([NormalUser2, NormalUser3], 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ],
+            [
+                {
+                    "functionName": "batchTransfer([NormalUser2, NormalUser3], 100)",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ]
+        ]
+    },
+    {
+        "functionName": "BecToken",
+        "block": [
+            "totalSupply = 7000000000 * (10**(uint256(decimals)));",
+            "balances[msg.sender] = totalSupply;"
+        ],
+        "block_first_statement": [
+            "totalSupply = 7000000000 * (10**(uint256(decimals)));",
+            "balances[msg.sender] = totalSupply;"
+        ],
+        "function_call_statement": [],
+        "sequences": [
+            [
+                {
+                    "functionName": "BecToken()",
+                    "msgValue": 0,
+                    "msgSender": "TargetOwner"
+                }
+            ],
+            [
+                {
+                    "functionName": "BecToken()",
+                    "msgValue": 0,
+                    "msgSender": "TargetOwner"
+                }
+            ]
+        ]
+    },
+    {
+        "functionName": "fallback",
+        "block": [
+            "revert();"
+        ],
+        "block_first_statement": [
+            "revert();"
+        ],
+        "function_call_statement": [
+            "revert();"
+        ],
+        "sequences": [
+            [
+                {
+                    "functionName": "fallback()",
+                    "msgValue": 0,
+                    "msgSender": "NormalUser1"
+                }
+            ]
+        ]
+    }
+]
+```
+
+### Explanation of the Sequences:
+
+1. **`transfer` Function:**
+   - To reach the first statement `balances[msg.sender] = balances[msg.sender].sub(_value);`, we need to call the `transfer` function with valid parameters. The `msg.sender` must have enough balance, and `_value` must be greater than 0.
+   - The sequence is designed to call `transfer(NormalUser2, 100)` with `msg.sender` as `NormalUser1`.
+
+2. **`transferFrom` Function:**
+   - To reach the first statement `balances[_from] = balances[_from].sub(_value);`, we need to call `approve` first to allow `NormalUser2` to spend tokens on behalf of `NormalUser1`. Then, `transferFrom` is called with valid parameters.
+   - The sequence is designed to call `approve(NormalUser2, 100)` followed by `transferFrom(NormalUser1, NormalUser3, 100)`.
+
+3. **`approve` Function:**
+   - To reach the first statement `allowed[msg.sender][_spender] = _value;`, we need to call the `approve` function with valid parameters.
+   - The sequence is designed to call `approve(NormalUser2, 100)`.
+
+4. **`batchTransfer` Function:**
+   - To reach the first statement `uint cnt = _receivers.length;`, we need to call the `batchTransfer` function with valid parameters. The `msg.sender` must have enough balance, and `_value` must be greater than 0.
+   - The sequence is designed to call `batchTransfer([NormalUser2, NormalUser3], 100)`.
+
+5. **`BecToken` Function:**
+   - To reach the first statement `totalSupply = 7000000000 * (10**(uint256(decimals)));`, we need to call the constructor `BecToken()`.
+   - The sequence is designed to call `BecToken()` with `msg.sender` as `TargetOwner`.
+
+6. **`fallback` Function:**
+   - To reach the first statement `revert();`, we need to call the fallback function.
+   - The sequence is designed to call `fallback()` with `msg.sender` as `NormalUser1`.
+
+This JSON array now includes the `sequences` key for each function, ensuring that the program can reach each `block_first_statement` by executing the designed function call sequences.

@@ -1,0 +1,13 @@
+```json
+{
+  "functions": [
+    "makeOldFucks"
+  ],
+  "dataflow": [
+    "makeOldFucks->makeOldFucks"
+  ],
+  "sequence": [
+    "makeOldFucks(129),makeOldFucks(129)"
+  ]
+}
+```

@@ -1,0 +1,16 @@
+{
+  "functions": [
+    "SetMinSum",
+    "SetLogFile",
+    "Initialized",
+    "Put",
+    "Collect"
+  ],
+  "dataflow": [
+    "Put->Collect"
+  ],
+  "sequence": [
+    "Put(0),Collect(1)"
+  ]
+}
+['"Put(0),Collect(1)"']

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "D:\llmAuditExe\main.py", line 14, in <module>
+    with open(file_path,"r",encoding='utf-8') as file:
+OSError: [Errno 22] Invalid argument: "'D:\\llmAuditExe\\tmp.txt'"

@@ -1,0 +1,13 @@
+```json
+{
+  "functions": [
+    "transfer"
+  ],
+  "dataflow": [
+    "transfer->transfer"
+  ],
+  "sequence": [
+    "transfer(address(0), address(0), [address(0)], 1), transfer(address(0), address(0), [address(0)], 1)"
+  ]
+}
+```

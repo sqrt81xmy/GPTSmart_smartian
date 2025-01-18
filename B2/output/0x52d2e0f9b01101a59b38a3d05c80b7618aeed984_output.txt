@@ -1,0 +1,16 @@
+```json
+{
+  "functions": [
+    "EtherGet",
+    "withdrawTokens",
+    "withdrawEther",
+    "getTokens"
+  ],
+  "dataflow": [
+    "EtherGet->withdrawTokens->withdrawEther"
+  ],
+  "sequence": [
+    "EtherGet(),withdrawTokens(1),withdrawEther()"
+  ]
+}
+```

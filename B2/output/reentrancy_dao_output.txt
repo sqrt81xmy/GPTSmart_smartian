@@ -1,0 +1,14 @@
+```json
+{
+  "functions": [
+    "withdrawAll",
+    "deposit"
+  ],
+  "dataflow": [
+    "deposit->withdrawAll"
+  ],
+  "sequence": [
+    "deposit(1),withdrawAll()"
+  ]
+}
+```

@@ -1,0 +1,15 @@
+```json
+{
+  "functions": [
+    "withdrawAll",
+    "withdraw",
+    "sendMoney"
+  ],
+  "dataflow": [
+    "withdrawAll->withdraw"
+  ],
+  "sequence": [
+    "withdrawAll(),withdraw(1)"
+  ]
+}
+```

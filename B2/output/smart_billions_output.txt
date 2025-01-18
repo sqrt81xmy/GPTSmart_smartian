@@ -1,0 +1,51 @@
+```json
+{
+  "functions": [
+    "hashesLength",
+    "walletBalanceOf",
+    "walletPeriodOf",
+    "walletBlockOf",
+    "betValueOf",
+    "betHashOf",
+    "betBlockNumberOf",
+    "dividendsBlocks",
+    "changeOwner",
+    "changeAnimator",
+    "setInvestStart",
+    "setBetMax",
+    "resetBet",
+    "coldStore",
+    "hotStore",
+    "houseKeeping",
+    "payWallet",
+    "pay",
+    "investDirect",
+    "invest",
+    "disinvest",
+    "payDividends",
+    "commitDividend",
+    "betPrize",
+    "betOf",
+    "won",
+    "play",
+    "playRandom",
+    "playSystem",
+    "addHashes",
+    "addHashes128",
+    "calcHashes",
+    "getHash",
+    "putHash",
+    "putHashes"
+  ],
+  "dataflows": [
+    "invest->commitDividend->payWallet",
+    "playSystem->won->payWallet",
+    "invest->commitDividend->payDividends"
+  ],
+  "sequences": [
+    "invest(1),commitDividend(1),payWallet()",
+    "playSystem(1,1),won(),payWallet()",
+    "invest(1),commitDividend(1),payDividends()"
+  ]
+}
+```

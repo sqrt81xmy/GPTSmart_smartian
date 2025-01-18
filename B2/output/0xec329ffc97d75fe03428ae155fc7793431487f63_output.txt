@@ -1,0 +1,21 @@
+```json
+{
+  "functions": [
+    "Owned",
+    "changeOwner",
+    "execute",
+    "TokenSender",
+    "fill",
+    "run",
+    "hasTerminated",
+    "nTransfers",
+    "gas"
+  ],
+  "dataflow": [
+    "fill->run->hasTerminated"
+  ],
+  "sequence": [
+    "fill([1, 2, 3]), run(), hasTerminated()"
+  ]
+}
+```

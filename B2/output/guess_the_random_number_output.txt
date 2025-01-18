@@ -1,0 +1,15 @@
+```json
+{
+  "functions": [
+    "GuessTheRandomNumberChallenge",
+    "isComplete",
+    "guess"
+  ],
+  "dataflow": [
+    "GuessTheRandomNumberChallenge->guess"
+  ],
+  "sequence": [
+    "GuessTheRandomNumberChallenge(1 ether),guess(1,1 ether)"
+  ]
+}
+```

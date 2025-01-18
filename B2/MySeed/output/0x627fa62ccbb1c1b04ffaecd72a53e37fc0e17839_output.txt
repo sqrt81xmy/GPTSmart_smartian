@@ -1,0 +1,29 @@
+Here is the result based on the provided `TokenBank` contract:
+
+```json
+{
+  "functions": [
+    "initTokenBank",
+    "Deposit",
+    "WitdrawTokenToHolder",
+    "WithdrawToHolder"
+  ],
+  "dataflow": [
+    "Deposit->WitdrawTokenToHolder->WithdrawToken",
+    "Deposit->WithdrawToHolder"
+  ],
+  "sequence": [
+    "Deposit(),WitdrawTokenToHolder(1,0,1),WithdrawToken(1,1,1)",
+    "Deposit(),WithdrawToHolder(1,1)"
+  ]
+}
+```
+
+### Explanation:
+1. **Functions**: The list contains all the functions found in the `TokenBank` contract.
+2. **Dataflow**:
+   - The first dataflow indicates that the `Deposit` function modifies the `Holders` mapping, which is then used in `WitdrawTokenToHolder` to check if the holder has a balance before calling `WithdrawToken`.
+   - The second dataflow shows that `Deposit` also affects the `Holders` mapping, which is then used in `WithdrawToHolder` to check the balance before executing the withdrawal.
+3. **Sequence**:
+   - The sequences are generated based on the identified dataflows, with parameters replaced by their respective values as per the instructions. The parameters are simplified to integers as specified.
+['"Deposit(),WitdrawTokenToHolder(1,0,1),WithdrawToken(1,1,1)",\n    "Deposit(),WithdrawToHolder(1,1)"']

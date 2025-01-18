@@ -1,0 +1,19 @@
+```json
+{
+  "functions": [
+    "Lottery",
+    "makeBet",
+    "getBets",
+    "destroy"
+  ],
+  "dataflow": [
+    "makeBet->getBets",
+    "makeBet->destroy"
+  ],
+  "sequences": [
+    "makeBet(),getBets()",
+    "makeBet(),destroy()"
+  ]
+}
+```
+No match found.

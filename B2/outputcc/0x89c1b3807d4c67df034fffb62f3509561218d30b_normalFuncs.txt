@@ -1,0 +1,1494 @@
+{ Transactions =
+   [|{ FuncSpec = { Name = "constructor"
+                    Signature = [||]
+                    Kind = Constructor
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 0UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "upgrade"
+                    Signature = [|9uy; 0uy; 240uy; 16uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = true
+                    Entry = 311UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }; { TypeStr = "address"
+                                                       Kind = Address }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "address"
+                     Kind = Address }
+            Elems =
+             [|{ ElemType = Address
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 20
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "restart"
+                    Signature = [|30uy; 243uy; 117uy; 93uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = true
+                    Entry = 378UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "newVersion"
+                    Signature = [|41uy; 205uy; 218uy; 35uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 401UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser3
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "SGX_ADDRESS"
+                    Signature = [|46uy; 40uy; 179uy; 245uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 444UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = true
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "DELIVERED_FEE_FLAG"
+                    Signature = [|57uy; 194uy; 105uy; 124uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 531UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "withdraw"
+                    Signature = [|60uy; 207uy; 214uy; 11uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = true
+                    Entry = 574UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = true
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "killswitch"
+                    Signature = [|66uy; 221uy; 150uy; 247uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 597UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser3
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec =
+        { Name = "deliver"
+          Signature = [|72uy; 122uy; 110uy; 50uy|]
+          Kind = Normal
+          Payable = false
+          OnlyOwner = false
+          Entry = 644UL
+          ArgSpecs =
+           [|{ TypeStr = "uint256"
+               Kind = UInt 32 }; { TypeStr = "uint64"
+                                   Kind = UInt 8 };
+             { TypeStr = "bytes32"
+               Kind = Array (FixedSize 32, Byte) }; { TypeStr = "uint64"
+                                                      Kind = UInt 8 };
+             { TypeStr = "bytes32"
+               Kind = Array (FixedSize 32, Byte) }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint64"
+                     Kind = UInt 8 }
+            Elems =
+             [|{ ElemType = UInt 8
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 8
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "bytes32"
+                     Kind = Array (FixedSize 32, Byte) }
+            Elems =
+             [|{ ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint64"
+                     Kind = UInt 8 }
+            Elems =
+             [|{ ElemType = UInt 8
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 8
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "bytes32"
+                     Kind = Array (FixedSize 32, Byte) }
+            Elems =
+             [|{ ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "cancel"
+                    Signature = [|76uy; 18uy; 94uy; 121uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 747UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }; { TypeStr = "uint64"
+                                                       Kind = UInt 8 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint64"
+                     Kind = UInt 8 }
+            Elems =
+             [|{ ElemType = UInt 8
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 8
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec =
+        { Name = "request"
+          Signature = [|88uy; 72uy; 123uy; 238uy|]
+          Kind = Normal
+          Payable = true
+          OnlyOwner = false
+          Entry = 822UL
+          ArgSpecs =
+           [|{ TypeStr = "uint256"
+               Kind = UInt 32 }; { TypeStr = "uint8"
+                                   Kind = UInt 1 }; { TypeStr = "address"
+                                                      Kind = Address };
+             { TypeStr = "bytes4"
+               Kind = Array (FixedSize 4, Byte) }; { TypeStr = "uint256"
+                                                     Kind = UInt 32 };
+             { TypeStr = "bytes32[]"
+               Kind = Array (UnfixedSize, Array (FixedSize 32, Byte)) }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }; { Spec = { TypeStr = "uint8"
+                                         Kind = UInt 1 }
+                                Elems = [|{ ElemType = UInt 1
+                                            ByteVals = [|Untouched 0uy|]
+                                            MaxLength = 1
+                                            ByteCursor = 0 }|]
+                                ElemCursor = 0 };
+          { Spec = { TypeStr = "address"
+                     Kind = Address }
+            Elems =
+             [|{ ElemType = Address
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 20
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "bytes4"
+                     Kind = Array (FixedSize 4, Byte) }
+            Elems =
+             [|{ ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "bytes32[]"
+                     Kind = Array (UnfixedSize, Array (FixedSize 32, Byte)) }
+            Elems =
+             [|{ ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 };
+               { ElemType = Byte
+                 ByteVals = [|Untouched 0uy|]
+                 MaxLength = 1
+                 ByteCursor = 0 }; { ElemType = Byte
+                                     ByteVals = [|Untouched 0uy|]
+                                     MaxLength = 1
+                                     ByteCursor = 0 }; ...|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = true
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "FAIL_FLAG"
+                    Signature = [|102uy; 163uy; 147uy; 80uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1027UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "requestCnt"
+                    Signature = [|107uy; 167uy; 255uy; 213uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1070UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser1
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "MIN_FEE"
+                    Signature = [|118uy; 199uy; 163uy; 199uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1133UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "CANCELLATION_FEE"
+                    Signature = [|120uy; 177uy; 124uy; 207uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1176UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "requests"
+                    Signature = [|129uy; 209uy; 44uy; 88uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1219UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }; { TypeStr = "uint256"
+                                                       Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser3
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "GAS_PRICE"
+                    Signature = [|139uy; 14uy; 229uy; 163uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1470UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser1
+       UseAgent = true
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "unrespondedCnt"
+                    Signature = [|144uy; 143uy; 104uy; 238uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1513UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec =
+        { Name = "reset"
+          Signature = [|166uy; 128uy; 28uy; 189uy|]
+          Kind = Normal
+          Payable = false
+          OnlyOwner = true
+          Entry = 1576UL
+          ArgSpecs =
+           [|{ TypeStr = "uint256"
+               Kind = UInt 32 }; { TypeStr = "uint256"
+                                   Kind = UInt 32 }; { TypeStr = "uint256"
+                                                       Kind = UInt 32 };
+             { TypeStr = "uint256"
+               Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 };
+          { Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "CANCELLED_FEE_FLAG"
+                    Signature = [|190uy; 13uy; 162uy; 81uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1641UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = true
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "SUCCESS_FLAG"
+                    Signature = [|208uy; 115uy; 202uy; 61uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1684UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser1
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "suspend"
+                    Signature = [|230uy; 64uy; 11uy; 190uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = true
+                    Entry = 1727UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "externalCallFlag"
+                    Signature = [|252uy; 155uy; 250uy; 166uy|]
+                    Kind = Normal
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 1750UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = NormalUser2
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L };
+     { FuncSpec = { Name = "fallback"
+                    Signature = [||]
+                    Kind = Fallback
+                    Payable = false
+                    OnlyOwner = false
+                    Entry = 0UL
+                    ArgSpecs = [|{ TypeStr = "uint256"
+                                   Kind = UInt 32 }|] }
+       Args =
+        [|{ Spec = { TypeStr = "uint256"
+                     Kind = UInt 32 }
+            Elems =
+             [|{ ElemType = UInt 32
+                 ByteVals =
+                  [|Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy;
+                    Untouched 0uy; Untouched 0uy; Untouched 0uy; Untouched 0uy|]
+                 MaxLength = 32
+                 ByteCursor = 0 }|]
+            ElemCursor = 0 }|]
+       ArgCursor = 0
+       Sender = TargetOwner
+       UseAgent = false
+       Timestamp = 10000000L
+       Blocknum = 20000000L }|]
+  TXCursor = 0 }

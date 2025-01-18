@@ -1,0 +1,249 @@
+{
+  "res": [
+    {
+      "functionName": "safeMul",
+      "sequences": [
+        [
+          {
+            "functionName": "safeMul(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in safeMul, we need to call safeMul with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "safeDiv",
+      "sequences": [
+        [
+          {
+            "functionName": "safeDiv(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in safeDiv, we need to call safeDiv with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "safeSub",
+      "sequences": [
+        [
+          {
+            "functionName": "safeSub(2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in safeSub, we need to call safeSub with parameters that satisfy the condition b <= a to avoid the assert statement failing."
+      ]
+    },
+    {
+      "functionName": "safeAdd",
+      "sequences": [
+        [
+          {
+            "functionName": "safeAdd(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in safeAdd, we need to call safeAdd with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "max64",
+      "sequences": [
+        [
+          {
+            "functionName": "max64(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in max64, we need to call max64 with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "min64",
+      "sequences": [
+        [
+          {
+            "functionName": "min64(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in min64, we need to call min64 with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "max256",
+      "sequences": [
+        [
+          {
+            "functionName": "max256(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in max256, we need to call max256 with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "min256",
+      "sequences": [
+        [
+          {
+            "functionName": "min256(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in min256, we need to call min256 with any parameters since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "assert",
+      "sequences": [
+        [
+          {
+            "functionName": "assert(true)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in assert, we need to call assert with a true condition to avoid the throw statement."
+      ]
+    },
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "transfer(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in transfer, we need to call transfer with parameters that satisfy the conditions in safeSub and safeAdd, and ensure the sender has enough balance."
+      ]
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "approve(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in transferFrom, we first need to approve NormalUser2 to spend tokens on behalf of NormalUser1, then call transferFrom with parameters that satisfy the conditions in safeSub and safeAdd."
+      ]
+    },
+    {
+      "functionName": "balanceOf",
+      "sequences": [
+        [
+          {
+            "functionName": "balanceOf(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in balanceOf, we need to call balanceOf with any address since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "approve(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in approve, we need to call approve with parameters that do not trigger the throw condition, i.e., either _value is 0 or the allowance is 0."
+      ]
+    },
+    {
+      "functionName": "allowance",
+      "sequences": [
+        [
+          {
+            "functionName": "allowance(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in allowance, we need to call allowance with any addresses since there are no conditions or function calls before the first statement."
+      ]
+    },
+    {
+      "functionName": "mint",
+      "sequences": [
+        [
+          {
+            "functionName": "mint(NormalUser1, 1)",
+            "msgValue": 1,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in mint, we need to call mint with parameters that satisfy the conditions, i.e., tokenAmount equals amount, amount is not 0, and receiver is msg.sender. We also need to ensure that msg.value is sufficient to calculate tokenAmount correctly."
+      ]
+    },
+    {
+      "functionName": "Burn",
+      "sequences": [
+        [
+          {
+            "functionName": "Burn()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first statement in Burn, we need to call Burn from the owner address and ensure that totalSupply is less than 1000000 to avoid the throw statement."
+      ]
+    }
+  ]
+}

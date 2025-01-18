@@ -1,0 +1,14 @@
+```json
+{
+  "functions": [
+    "callchecked",
+    "callnotchecked"
+  ],
+  "dataflow": [
+    "callnotchecked->callchecked"
+  ],
+  "sequence": [
+    "callnotchecked(1),callchecked(1)"
+  ]
+}
+```

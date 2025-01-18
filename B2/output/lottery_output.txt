@@ -1,0 +1,16 @@
+```json
+{
+  "functions": [
+    "Lottery",
+    "makeBet",
+    "getBets",
+    "destroy"
+  ],
+  "dataflow": [
+    "makeBet->getBets"
+  ],
+  "sequence": [
+    "makeBet(1),getBets()"
+  ]
+}
+```

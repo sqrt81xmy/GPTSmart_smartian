@@ -1,0 +1,6 @@
+{
+    "functions": ["makeOldFucks"],
+    "dataflow": ["makeOldFucks->giveBlockReward"],
+    "sequence": ["makeOldFucks(129),giveBlockReward()"]
+}
+['"makeOldFucks(129),giveBlockReward()"']

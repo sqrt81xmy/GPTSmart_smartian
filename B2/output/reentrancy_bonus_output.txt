@@ -1,0 +1,15 @@
+```json
+{
+  "functions": [
+    "withdrawReward",
+    "getFirstWithdrawalBonus",
+    "()"
+  ],
+  "dataflow": [
+    "getFirstWithdrawalBonus->withdrawReward->getFirstWithdrawalBonus"
+  ],
+  "sequence": [
+    "getFirstWithdrawalBonus(address),withdrawReward(address),getFirstWithdrawalBonus(address)"
+  ]
+}
+```

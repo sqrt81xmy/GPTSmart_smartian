@@ -1,0 +1,16 @@
+```json
+{
+  "functions": [
+    "constructor",
+    "lockInGuess",
+    "settle"
+  ],
+  "dataflow": [
+    "lockInGuess->settle"
+  ],
+  "sequence": [
+    "lockInGuess(0x1234567890abcdef),settle()"
+  ]
+}
+```
+['"lockInGuess(0x1234567890abcdef),settle()"']

@@ -1,0 +1,18 @@
+```json
+{
+  "functions": [
+    "donate",
+    "balanceOf",
+    "withdraw"
+  ],
+  "dataflow": [
+    "donate->withdraw->withdraw",
+    "withdraw->withdraw"
+  ],
+  "sequence": [
+    "donate(0x1),withdraw(1),withdraw(1)",
+    "withdraw(1),withdraw(1)"
+  ]
+}
+```
+['"donate(0x1),withdraw(1),withdraw(1)",\n    "withdraw(1),withdraw(1)"']

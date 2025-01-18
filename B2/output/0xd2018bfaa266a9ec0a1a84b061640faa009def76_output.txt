@@ -1,0 +1,17 @@
+```json
+{
+  "function_names": [
+    "Get",
+    "withdraw",
+    "Command"
+  ],
+  "dataflow": [
+    "Get->withdraw",
+    "Get->Command"
+  ],
+  "sequence": [
+    "Get(2 ether),withdraw()",
+    "Get(2 ether),Command(0x1Fb3acdBa788CA50Ce165E5A4151f05187C67cd6,[])"
+  ]
+}
+```

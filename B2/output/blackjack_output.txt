@@ -1,0 +1,25 @@
+```json
+{
+  "functions": [
+    "BlackJack",
+    "deal",
+    "hit",
+    "stand",
+    "checkGameResult",
+    "calculateScore",
+    "getPlayerCard",
+    "getHouseCard",
+    "getPlayerCardsNumber",
+    "getHouseCardsNumber",
+    "getGameState"
+  ],
+  "dataflow": [
+    "deal->hit->checkGameResult",
+    "deal->stand->checkGameResult"
+  ],
+  "sequence": [
+    "deal(1), hit(1), checkGameResult(1)",
+    "deal(1), stand(1), checkGameResult(1)"
+  ]
+}
+```

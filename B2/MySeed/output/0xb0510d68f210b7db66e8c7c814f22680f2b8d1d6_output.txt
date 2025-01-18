@@ -1,0 +1,12 @@
+{
+  "dataflow": [
+    "fundPuppets->extra"
+  ],
+  "sequence": [
+    "fundPuppets(1),extra(1)",
+    "fundPuppets(2),extra(2)",
+    "fundPuppets(3),extra(3)",
+    "fundPuppets(4),extra(4)"
+  ]
+}
+['"fundPuppets(1),extra(1)",\n    "fundPuppets(2),extra(2)",\n    "fundPuppets(3),extra(3)",\n    "fundPuppets(4),extra(4)"']

@@ -1,0 +1,16 @@
+{
+  "functions": [
+    "AirDropContract",
+    "validAddress",
+    "transfer"
+  ],
+  "dataflow": [
+    "validAddress->transfer",
+    "transfer->validAddress"
+  ],
+  "sequence": [
+    "validAddress(contract_address)",
+    "transfer(contract_address, tos1, vs1)"
+  ]
+}
+['"validAddress(contract_address)",\n    "transfer(contract_address, tos1, vs1)"']

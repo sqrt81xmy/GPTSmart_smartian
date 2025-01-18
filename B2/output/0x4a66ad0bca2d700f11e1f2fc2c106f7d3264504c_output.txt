@@ -1,0 +1,13 @@
+```json
+{
+  "function_names": [
+    "transfer"
+  ],
+  "dataflow": [
+    "transfer->transfer"
+  ],
+  "sequence": [
+    "transfer([0x1f844685f7Bf86eFcc0e74D8642c54A257111923], [1]), transfer([0x1f844685f7Bf86eFcc0e74D8642c54A257111923], [1])"
+  ]
+}
+```

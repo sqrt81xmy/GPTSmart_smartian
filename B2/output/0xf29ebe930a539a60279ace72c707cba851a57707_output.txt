@@ -1,0 +1,14 @@
+```json
+{
+  "function_names": [
+    "go",
+    "()"
+  ],
+  "dataflow": [
+    "go->go"
+  ],
+  "sequence": [
+    "go(1),go(1)"
+  ]
+}
+```

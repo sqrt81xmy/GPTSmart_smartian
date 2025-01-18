@@ -1,0 +1,38 @@
+To analyze the provided Solidity contract and extract the required information, we will follow the steps outlined in your request.
+
+### Step 1: Identify all function names
+
+From the provided contract, we can identify the following functions:
+
+1. `callchecked`
+2. `callnotchecked`
+
+### Step 2: Find the dataflow
+
+In the `ReturnValue` contract, we can observe the following dataflow:
+
+- `callnotchecked` uses the `callee` parameter, which is passed to it when called. The `callchecked` function also uses the `callee` parameter but includes a `require` statement to check the result of the call. However, there is no direct data dependency between the two functions since they do not modify shared state variables or rely on each other's outputs.
+
+Since both functions are independent and do not affect each other's execution or state, we cannot establish a dataflow that involves more than two functions.
+
+### Step 3: Generate sequences based on dataflow
+
+Given that we have identified the functions but found no dataflow that meets the criteria of affecting each other, we can still generate sequences for each function independently. However, since the requirement is for sequences that involve more than two function calls, we cannot generate a valid sequence based on the provided contract.
+
+### Result in JSON format
+
+Since we have identified the functions but found no valid dataflow, the result will reflect that:
+
+```json
+{
+  "functions": [
+    "callchecked",
+    "callnotchecked"
+  ],
+  "dataflow": [],
+  "sequences": []
+}
+```
+
+This output indicates that while we have identified the functions, there is no dataflow that meets the specified criteria, and therefore no sequences can be generated.
+No match found.

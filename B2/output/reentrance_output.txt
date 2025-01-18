@@ -1,0 +1,16 @@
+```json
+{
+  "functions": [
+    "donate(address)",
+    "balanceOf(address)",
+    "withdraw(uint256)",
+    "()"
+  ],
+  "dataflow": [
+    "donate(address)->withdraw(uint256)->withdraw(uint256)"
+  ],
+  "sequence": [
+    "donate(1),withdraw(1),withdraw(1)"
+  ]
+}
+```

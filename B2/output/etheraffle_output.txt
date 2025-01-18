@@ -1,0 +1,21 @@
+```json
+{
+  "function_names": [
+    "Ethraffle_v4b",
+    "buyTickets",
+    "chooseWinner",
+    "getRefund",
+    "endRaffle",
+    "togglePause",
+    "kill"
+  ],
+  "dataflow": [
+    "buyTickets->chooseWinner->buyTickets",
+    "buyTickets->chooseWinner->endRaffle"
+  ],
+  "sequence": [
+    "buyTickets(1),chooseWinner(),buyTickets(1)",
+    "buyTickets(1),chooseWinner(),endRaffle()"
+  ]
+}
+```

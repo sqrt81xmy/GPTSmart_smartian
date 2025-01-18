@@ -1,0 +1,349 @@
+{
+  "res": [
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract with the constructor and then call transfer with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "balanceOf",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "balanceOf(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the block, we need to initialize the contract with the constructor and then call balanceOf with a valid address."
+      ]
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract, approve a spender, and then call transferFrom with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution.",
+        "To reach the third block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract and then call approve with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "allowance",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "allowance(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the block, we need to initialize the contract and then call allowance with valid parameters."
+      ]
+    },
+    {
+      "functionName": "increaseApproval",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "increaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "increaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract and then call increaseApproval with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "decreaseApproval",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "decreaseApproval(NormalUser2, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract, approve a spender, and then call decreaseApproval with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution.",
+        "To reach the third block, we follow the same steps as the first block since it's part of the same function execution.",
+        "To reach the fourth block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "mint",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "TARG_CONTRACT"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "TARG_CONTRACT"
+          }
+        ],
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "mint(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "TARG_CONTRACT"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the first block, we need to initialize the contract and then call mint with valid parameters.",
+        "To reach the second block, we follow the same steps as the first block since it's part of the same function execution.",
+        "To reach the third block, we follow the same steps as the first block since it's part of the same function execution."
+      ]
+    },
+    {
+      "functionName": "unfreeze",
+      "sequences": [
+        [
+          {
+            "functionName": "DSPXToken(TARG_CONTRACT, TargetOwner)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "unfreeze()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "To reach the block, we need to initialize the contract and then call unfreeze with the correct msg.sender."
+      ]
+    }
+  ]
+}

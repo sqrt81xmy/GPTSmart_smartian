@@ -1,0 +1,13 @@
+{
+    "functions": [
+        "go",
+        ""
+    ],
+    "dataflow": [
+        "go->fallback"
+    ],
+    "sequence": [
+        "go(1),fallback()"
+    ]
+}
+['"go(1),fallback()"']

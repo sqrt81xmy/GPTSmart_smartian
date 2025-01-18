@@ -1,0 +1,13 @@
+Now your generated json result can not be decoded into the json format,
+which means your result is wrong as json object.
+You should check out which mistake you have made, I can give you two answers:
+1.Your output result is incomplete.
+2.Your result contains some error that can be decoded.
+If you think the reason is the first, then please return the "incomplete".
+If you think the reason is the second, then please modify the wrong result according to the json format and my standard about the function sequence result in the context.
+
+So, in summary, you should return a json object to me.
+One key is `reason`, the value corresponding to this key you can choose is "first" and "second",
+another key is `result`, the value corresponding to this key can be divided into the following situations:
+1. if the reason is `first`, then this value should be "null" string.
+2. if the reason is `second`, then this value should be the modified json object which can be decoded as json object.
