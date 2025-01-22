@@ -21,10 +21,19 @@ def deal_smartian_fuzzer(data,filename,tmpDir,mainContract,datasetName,outputDir
         binName = filename.replace(".sol", ".bin")
         binDir = os.path.join(smartian_datasetDir,"bin")
         binPath = os.path.join(binDir,binName)
+        cmd = "dotnet workload update"
         cmd_str_build = "dotnet build /home/test/tools/GPTSmart_smartian/Smartian/src/Smartian.fsproj"
         cmd_str_exec = "dotnet /home/test/tools/GPTSmart_smartian/Smartian/src/bin/Debug/net8.0/Smartian.dll fuzz " \
                        " -p " + binPath + " -a " + abiPath + " -s " + seedDir + \
                        " -t " + timeLimit + " -o " + outputDir
+
+        try:
+            print("Running build command...")
+            result_build = subprocess.run(cmd, shell=True, check=True, text=True)
+            print("Build completed successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"Build failed with error: {e}")
+            exit(1)  # 如果 build 失败，退出程序
 
         # 执行 build 命令
         try:
