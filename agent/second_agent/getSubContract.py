@@ -1,7 +1,7 @@
 import os
 
 from slither import Slither
-from second_agent.split_ifUse_define_set import getSetfromSolidity
+from agent.second_agent.split_ifUse_define_set import getSetfromSolidity
 
 
 # # 安装 Solidity 编译器
@@ -70,16 +70,17 @@ def find_variable(contract, variName):
 #     [{'fName': 'getHouseCardsNumber', 'vari': []}], [{'fName': 'slitherConstructorVariables', 'vari': []}]]
 
 
-def getSubContract():
+def getSubContract(tmpDir,file_name,datasetName):
 
     """
         数据集的初始化
         dataset initialize
     """
-    datasetDir = "../B1"
+    # datasetDir = "../B1"
+    datasetDir = tmpDir
     solDir = os.path.join(datasetDir, "sol")
     assetsDir = os.path.join(datasetDir, "assets")
-    assetsPath = os.path.join(assetsDir, "B1.list")
+    assetsPath = os.path.join(assetsDir, datasetName + ".list")
     mainContract_map = {}
     with open(assetsPath) as file:
         lines = file.readlines()
@@ -91,7 +92,7 @@ def getSubContract():
         some data initialize that will be used later
     """
     solcs = []
-    file_name = "2018-10706.sol"
+    # file_name = "2018-10706.sol"
     solc_path = os.path.join(solDir, file_name)
     slither = Slither(solc_path)
     with open(solc_path) as file:
@@ -156,7 +157,7 @@ def getSubContract():
                 if sequence_single_function.parameters.__len__() == 0:
                     solc.append({
                         "functionName": sequence_single_function.name,
-                        "sequence": [
+                        "sequences": [
                             [
                                 {
                                     "functionName": "constructor()",
@@ -190,18 +191,21 @@ def getSubContract():
         lines = file.readlines()
     setFunctions = []
     for solc in solcs:
-        if solc.__len__() != 1:
+        if solc.__len__() != 1 or type(solc[0]) == list:
             str = ""
             for funcOrvari in solc:
                 for numberLine in funcOrvari:
-                    str += lines[numberLine - 1]
+                    try:
+                        str += lines[numberLine - 1]
+                    except Exception as e:
+                        continue
             setFunctions.append({
                 "newContract": contractPrefix + str + contractSuffix,
                 "functionLength": solc.__len__(),
                 "sequences": []
             })
         else:
-            setFunctions.append(solc)
+            setFunctions.append(solc[0])
             '''
                 solc应该具有以下的格式：
                 {
@@ -209,4 +213,5 @@ def getSubContract():
                     "sequences":[] 
                 }
             '''
+    return setFunctions
     print(setFunctions)

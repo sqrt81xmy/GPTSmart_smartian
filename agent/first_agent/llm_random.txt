@@ -1,0 +1,73 @@
+Please generate the function sequences for me after reading this solidity file.
+
+`solidityFile`
+
+each sequence you generated should follow this json format:
+
+`
+    [
+    {
+        functionName: "a(86,87,32)",
+        msgValue: 1,
+        msgSender: NormalUser1,
+    },
+    {
+        functionName: "b()",
+        msgValue: 1,
+        msgSender: NormalUser2,
+    },
+    {
+        functionName: "c()",
+        msgValue: 1,
+        msgSender: NormalUser3,
+    }
+     ]
+`
+
+and your result should be in this json format:
+
+`
+{
+    "res":[
+         {
+         "sequences":[
+             [
+                {
+                    functionName: "a(86,87,32)",
+                    msgValue: 1,
+                    msgSender: NormalUser1,
+                },
+                {
+                    functionName: "b()",
+                    msgValue: 1,
+                    msgSender: NormalUser2,
+                },
+                {
+                    functionName: "c()",
+                    msgValue: 1,
+                    msgSender: NormalUser3,
+                }
+             ],
+             [
+                {
+                    functionName: "a(86,87,32)",
+                    msgValue: 1,
+                    msgSender: NormalUser1,
+                },
+                {
+                    functionName: "b()",
+                    msgValue: 1,
+                    msgSender: NormalUser2,
+                },
+                {
+                    functionName: "c()",
+                    msgValue: 1,
+                    msgSender: NormalUser3,
+                }
+            ]
+         ]
+    ]
+}
+
+}
+`

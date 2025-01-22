@@ -1,0 +1,379 @@
+{
+  "res": [
+    {
+      "functionName": "playerRollDice",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "playerRollDice(2)",
+            "msgValue": 100000000000000000,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `playerRollDice(2)` is called with `msg.value` set to the minimum bet value (100000000000000000 wei) and `msg.sender` set to `NormalUser1` to reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "__callback",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "playerRollDice(2)",
+            "msgValue": 100000000000000000,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "__callback(bytes32, string, bytes)",
+            "msgValue": 0,
+            "msgSender": "oraclize_cbAddress"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `playerRollDice(2)` is called with `msg.value` set to the minimum bet value (100000000000000000 wei) and `msg.sender` set to `NormalUser1` to initiate a bet. Finally, `__callback(bytes32, string, bytes)` is called by `oraclize_cbAddress` to process the result of the bet and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "playerWithdrawPendingTransactions",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "playerRollDice(2)",
+            "msgValue": 100000000000000000,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "__callback(bytes32, string, bytes)",
+            "msgValue": 0,
+            "msgSender": "oraclize_cbAddress"
+          },
+          {
+            "functionName": "playerWithdrawPendingTransactions()",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `playerRollDice(2)` is called with `msg.value` set to the minimum bet value (100000000000000000 wei) and `msg.sender` set to `NormalUser1` to initiate a bet. Next, `__callback(bytes32, string, bytes)` is called by `oraclize_cbAddress` to process the result of the bet. Finally, `playerWithdrawPendingTransactions()` is called by `NormalUser1` to withdraw any pending transactions and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "setMaxProfit",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setMaxProfit()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `setMaxProfit()` is called by `TargetOwner` to set the maximum profit and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "playerCheckProvablyFair",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "playerCheckProvablyFair(uint, bytes)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `playerCheckProvablyFair(uint, bytes)` is called by `NormalUser1` to check the provably fair result and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetCallbackGasPrice",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetCallbackGasPrice(uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetCallbackGasPrice(uint)` is called by `TargetOwner` to set the gas price for oraclize callbacks and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetOraclizeSafeGas",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetOraclizeSafeGas(uint32)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetOraclizeSafeGas(uint32)` is called by `TargetOwner` to set the safe gas limit for oraclize queries and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerUpdateContractBalance",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerUpdateContractBalance(uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerUpdateContractBalance(uint)` is called by `TargetOwner` to update the contract balance and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetHouseEdge",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetHouseEdge(uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetHouseEdge(uint)` is called by `TargetOwner` to set the house edge and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetMaxProfitAsPercentOfHouse",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetMaxProfitAsPercentOfHouse(uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetMaxProfitAsPercentOfHouse(uint)` is called by `TargetOwner` to set the maximum profit as a percentage of the house and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetMinBet",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetMinBet(uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetMinBet(uint)` is called by `TargetOwner` to set the minimum bet and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerTransferEther",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerTransferEther(address, uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerTransferEther(address, uint)` is called by `TargetOwner` to transfer ether and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerRefundPlayer",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerRefundPlayer(bytes32, address, uint, uint)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerRefundPlayer(bytes32, address, uint, uint)` is called by `TargetOwner` to refund a player and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerPauseGame",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerPauseGame(bool)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerPauseGame(bool)` is called by `TargetOwner` to pause the game and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerPausePayouts",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerPausePayouts(bool)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerPausePayouts(bool)` is called by `TargetOwner` to pause payouts and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerSetTreasury",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerSetTreasury(address)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerSetTreasury(address)` is called by `TargetOwner` to set the treasury address and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerChangeOwner",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerChangeOwner(address)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerChangeOwner(address)` is called by `TargetOwner` to change the owner and reach the first statement in the first block."
+      ]
+    },
+    {
+      "functionName": "ownerkill",
+      "sequences": [
+        [
+          {
+            "functionName": "Etheroll()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerkill()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, the constructor function `Etheroll()` must be called to initialize the contract. Then, `ownerkill()` is called by `TargetOwner` to kill the contract and reach the first statement in the first block."
+      ]
+    }
+  ]
+}

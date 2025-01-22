@@ -3,12 +3,40 @@ This is the solidity file which may contains multiple contracts, some of them ma
 `solidityFile`
 
 You should first know the definition of the function, The function is in the format like below:
-`function go() public payable` or `function tokens_buy() payable returns (bool)`or ` function callchecked(address callee) public` or  `function () payable`
+`function go() public payable` or `function tokens_buy() payable returns (bool)`or ` function callchecked(address callee) public` or  `function () payable`.
 As you can see, the function should starts with the `function`.
+Some function will also write with the modifier like
+`function executeEmergencyWithdrawal()
+        onlyOwner
+        onlyAfterProposed
+        onlyIfStopped
+        onlyIfEmergencyTimeOutHasPassed{}`, and you should go to the modifier definition to meet its requirements.
+And The syntax for defining a modifier is as follows:
+`
+    modifier ModifierName {
+        // Pre-logic (executed before the function)
+        _;  // Placeholder for the function's execution
+        // Post-logic (executed after the function)
+    }
+    _; is a placeholder that indicates where the function's logic will be executed.
+    Pre-logic runs before the function.
+    Post-logic runs after the function.
+`
 
-Your focus should be on each inherited or primitive function contained in the mainContract `mainContract`.
+And for the above example, `onlyOwner` example is like:
 
-Please first help me find the block in each function which your focus is on.
+`
+modifier onlyOwner {
+        if (owner != msg.sender) throw;
+        _;
+    }
+`
+And when you execute the `executeEmergencyWithdrawal` function, it should first check the condition in the modifier `onlyOwner`, which is: `if (owner != msg.sender)`,
+and then is: `onlyAfterProposed`, `onlyIfStopped`, `onlyIfEmergencyTimeOutHasPassed`
+
+Your focus should be on each inherited or primitive and public but not private or internal function contained in the mainContract `mainContract`. So you should first find all functions and return them to me.
+
+Please then help me find the block in each function which your focus is on.
 
 To begin with, you should first know the definition of the function call, function call is to call the function that appears in the contract,
 and `function call` has the format like `transfer()` or the `obj.transfer()`, to summarize, a statement that contains parentheses is a function call.
@@ -98,6 +126,9 @@ third is the first statement array for each block, and the corresponding key is 
 so for any j less than `block`.length,  block_first_statement[j] is the first statement of the block[j],
 forth is the function call statement array, and the corresponding key is the `function_call_statement`,
 and this array contains all the function call statements in the function[i].
+
+And please add an object at the end of the array, which is all the functions that you think you should analyze,
+and explain to me why the others should not be analyzed and the corresponding key is `functions`.
 
 NOTE: You do not need to contain all the statements of the functions in your result,
 and you block SHOULD NOT contain the `if` or `require` statements or function calls like `_transfer(_from,owner,amount);` and `_from.transfer(revenue);`.

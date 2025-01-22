@@ -1,10 +1,14 @@
-Now your generated json result can not be decoded into the json format,
-which means your result is wrong as json object.
+This is a json object and can not be decoded into the json format,
+
+`input`
+
+which means it is wrong as json object.
 You should check out which mistake you have made, I can give you two answers:
-1.Your output result is incomplete.
-2.Your result contains some error that can be decoded.
+1.This json object is incomplete.Here `incomplete` means it is a json object originally, but because of the limitation of the output length, it was not fully input into the file, so it is incomplete.
+2.This json object contains some error that can be decoded.
 If you think the reason is the first, then please return the "incomplete".
-If you think the reason is the second, then please modify the wrong result according to the json format and my standard about the function sequence result in the context.
+If you think the reason is the second, then please modify the wrong result according to the json format.If you modify your result, please delete the `reason` key,
+but do not increase or decrease the length of the json array that corresponding to the key `res`.
 
 So, in summary, you should return a json object to me.
 One key is `reason`, the value corresponding to this key you can choose is "first" and "second",

@@ -1,0 +1,1182 @@
+{
+  "res": [
+    {
+      "functionName": "Goo",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "The constructor function 'Goo' must be called first to initialize the contract with the owner set to 'TargetOwner'."
+      ]
+    },
+    {
+      "functionName": "beginGame",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, initialize the contract with the constructor. Then, call 'beginGame' with a future timestamp and some Ether to start the game."
+      ]
+    },
+    {
+      "functionName": "tweakDailyDividends",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "tweakDailyDividends(5, 5)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'tweakDailyDividends' with valid percentages to adjust the daily dividends."
+      ]
+    },
+    {
+      "functionName": "totalSupply",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "totalSupply()",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'totalSupply' to get the total supply of Goo tokens."
+      ]
+    },
+    {
+      "functionName": "balanceOf",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "balanceOf(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'balanceOf' with a user's address to get their Goo balance."
+      ]
+    },
+    {
+      "functionName": "balanceOfUnclaimedGoo",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "balanceOfUnclaimedGoo(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'balanceOfUnclaimedGoo' to get the unclaimed Goo balance of a user."
+      ]
+    },
+    {
+      "functionName": "etherBalanceOf",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "etherBalanceOf(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'etherBalanceOf' to get the Ether balance of a user."
+      ]
+    },
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'transfer' to transfer Goo tokens from one user to another."
+      ]
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, approve a spender, then call 'transferFrom' to transfer Goo tokens on behalf of a user."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'approve' to allow a spender to transfer Goo tokens on behalf of the caller."
+      ]
+    },
+    {
+      "functionName": "allowance",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "allowance(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, approve a spender, then call 'allowance' to check the remaining allowance."
+      ]
+    },
+    {
+      "functionName": "getGooProduction",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getGooProduction(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getGooProduction' to get the Goo production of a user."
+      ]
+    },
+    {
+      "functionName": "updatePlayersGoo",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "updatePlayersGoo(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'updatePlayersGoo' to update a player's Goo balance based on their production."
+      ]
+    },
+    {
+      "functionName": "updatePlayersGooFromPurchase",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "updatePlayersGooFromPurchase(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'updatePlayersGooFromPurchase' to update a player's Goo balance after a purchase."
+      ]
+    },
+    {
+      "functionName": "increasePlayersGooProduction",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "increasePlayersGooProduction(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'increasePlayersGooProduction' to increase a player's Goo production."
+      ]
+    },
+    {
+      "functionName": "reducePlayersGooProduction",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "increasePlayersGooProduction(NormalUser1, 100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "reducePlayersGooProduction(NormalUser1, 50)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, increase a player's Goo production, then call 'reducePlayersGooProduction' to reduce it."
+      ]
+    },
+    {
+      "functionName": "buyBasicUnit",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyBasicUnit(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyBasicUnit' to purchase a basic unit."
+      ]
+    },
+    {
+      "functionName": "buyEthUnit",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyEthUnit(3, 1)",
+            "msgValue": 10000000000000000,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyEthUnit' with Ether to purchase an Ether unit."
+      ]
+    },
+    {
+      "functionName": "sellUnit",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyBasicUnit(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "sellUnit(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, purchase a unit, then call 'sellUnit' to sell it."
+      ]
+    },
+    {
+      "functionName": "buyUpgrade",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUpgrade(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyUpgrade' to purchase an upgrade."
+      ]
+    },
+    {
+      "functionName": "upgradeUnitMultipliers",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUpgrade(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, purchase an upgrade, which internally calls 'upgradeUnitMultipliers'."
+      ]
+    },
+    {
+      "functionName": "removeUnitMultipliers",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUpgrade(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "sellUnit(1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, purchase an upgrade, sell a unit, which internally calls 'removeUnitMultipliers'."
+      ]
+    },
+    {
+      "functionName": "buyRareItem",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyRareItem(1)",
+            "msgValue": 500000000000000000,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyRareItem' with Ether to purchase a rare item."
+      ]
+    },
+    {
+      "functionName": "withdrawEther",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "withdrawEther(100000000000000000)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'withdrawEther' to withdraw Ether."
+      ]
+    },
+    {
+      "functionName": "fundGooResearch",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "fundGooResearch(100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'fundGooResearch' to fund Goo research."
+      ]
+    },
+    {
+      "functionName": "claimResearchDividends",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "fundGooResearch(100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "claimResearchDividends(NormalUser2, 0, 0)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, fund Goo research, then call 'claimResearchDividends' to claim research dividends."
+      ]
+    },
+    {
+      "functionName": "claimGooDepositDividends",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "fundGooResearch(100)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "claimGooDepositDividends(NormalUser2, 0, 0)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, fund Goo research, then call 'claimGooDepositDividends' to claim deposit dividends."
+      ]
+    },
+    {
+      "functionName": "snapshotDailyGooResearchFunding",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "snapshotDailyGooResearchFunding()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'snapshotDailyGooResearchFunding' to snapshot daily Goo research funding."
+      ]
+    },
+    {
+      "functionName": "snapshotDailyGooDepositFunding",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "snapshotDailyGooDepositFunding()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'snapshotDailyGooDepositFunding' to snapshot daily Goo deposit funding."
+      ]
+    },
+    {
+      "functionName": "buyItemRaffleTicket",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyItemRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyItemRaffleTicket' to buy a raffle ticket for a rare item."
+      ]
+    },
+    {
+      "functionName": "buyUnitRaffleTicket",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUnitRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'buyUnitRaffleTicket' to buy a raffle ticket for a rare unit."
+      ]
+    },
+    {
+      "functionName": "startItemRaffle",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startItemRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'startItemRaffle' to start a raffle for a rare item."
+      ]
+    },
+    {
+      "functionName": "startUnitRaffle",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startUnitRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'startUnitRaffle' to start a raffle for a rare unit."
+      ]
+    },
+    {
+      "functionName": "awardItemRafflePrize",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startItemRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyItemRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardItemRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start an item raffle, buy a raffle ticket, then call 'awardItemRafflePrize' to award the prize."
+      ]
+    },
+    {
+      "functionName": "awardUnitRafflePrize",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startUnitRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUnitRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardUnitRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start a unit raffle, buy a raffle ticket, then call 'awardUnitRafflePrize' to award the prize."
+      ]
+    },
+    {
+      "functionName": "assignItemRafflePrize",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startItemRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyItemRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardItemRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start an item raffle, buy a raffle ticket, award the prize, which internally calls 'assignItemRafflePrize'."
+      ]
+    },
+    {
+      "functionName": "assignUnitRafflePrize",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startUnitRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUnitRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardUnitRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start a unit raffle, buy a raffle ticket, award the prize, which internally calls 'assignUnitRafflePrize'."
+      ]
+    },
+    {
+      "functionName": "drawRandomItemWinner",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startItemRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyItemRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardItemRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start an item raffle, buy a raffle ticket, award the prize, which internally calls 'drawRandomItemWinner'."
+      ]
+    },
+    {
+      "functionName": "drawRandomUnitWinner",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "startUnitRaffle(100000, 1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "buyUnitRaffleTicket(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "awardUnitRafflePrize(NormalUser1, 0)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start a unit raffle, buy a raffle ticket, award the prize, which internally calls 'drawRandomUnitWinner'."
+      ]
+    },
+    {
+      "functionName": "migrateV1Upgrades",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "migrateV1Upgrades([NormalUser1], [1], [1])",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'migrateV1Upgrades' to migrate upgrades from a previous version."
+      ]
+    },
+    {
+      "functionName": "protectAddress",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "protectAddress(NormalUser1, true)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, then call 'protectAddress' to protect an address."
+      ]
+    },
+    {
+      "functionName": "attackPlayer",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "attackPlayer(NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'attackPlayer' to attack another player."
+      ]
+    },
+    {
+      "functionName": "getPlayersBattlePower",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getPlayersBattlePower(NormalUser1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getPlayersBattlePower' to get the battle power of two players."
+      ]
+    },
+    {
+      "functionName": "getPlayersBattleStats",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getPlayersBattleStats(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getPlayersBattleStats' to get the battle stats of a player."
+      ]
+    },
+    {
+      "functionName": "getUnitsProduction",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getUnitsProduction(NormalUser1, 1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getUnitsProduction' to get the production of units for a player."
+      ]
+    },
+    {
+      "functionName": "getUnitsAttack",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getUnitsAttack(NormalUser1, 1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getUnitsAttack' to get the attack power of units for a player."
+      ]
+    },
+    {
+      "functionName": "getUnitsDefense",
+      "sequences": [
+        [
+          {
+            "functionName": "Goo()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "beginGame(100000)",
+            "msgValue": 1000000000000000000,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "getUnitsDefense(NormalUser1, 1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract, start the game, then call 'getUnitsDefense' to get the defense power of units for a player."
+      ]
+    },
+    {
+      "functionName": "getUnitsStealingCapacity",
+      "sequences": [
+        [
+          {

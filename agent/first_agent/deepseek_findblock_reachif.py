@@ -2,10 +2,13 @@ import asyncio
 import multiprocessing
 import os
 import re
+import string
 import time
 import json
 
-from tools.deepseek import chatWithMessages
+from slither import Slither
+
+from agent.tools.deepseek import chatWithMessages
 
 
 
@@ -29,6 +32,9 @@ def chatWithDeespseek(promptStudent, student_message):
 
 def deal_findBlock(file_content, student_message,mainContract):
     promptStudent = read_file("./agent/first_agent/prompt._findblock.txt")
+    letters = string.ascii_letters
+    for letter in letters:
+        file_content = file_content.replace(f"\\{letter}", f"\\\\{letter}")
     promptStudent = re.sub(r'`solidityFile`', file_content, promptStudent)
     promptStudent = re.sub(r'`mainContract`', mainContract, promptStudent)
     # print(promptStudent.__len__(), file_path)
@@ -41,6 +47,16 @@ def deal_reachStatement_if(student_message):
     # promptStudent = re.sub(r'`\$\{solidityFile\}`', file_content, promptStudent)
     # promptStudent = re.sub(r'`\$\{statementArray\}`', findBlockRes, promptStudent)
     # promptStudent = re.sub(r'`\$\{functionName\}`', functionName, promptStudent)
+    # print(promptStudent.__len__(), file_path)
+    resStudent = chatWithDeespseek(promptStudent, student_message)
+    return resStudent
+
+def deal_llm_random(file_content, student_message):
+    promptStudent = read_file("./agent/first_agent/llm_random.txt")
+    letters = string.ascii_letters
+    for letter in letters:
+        file_content = file_content.replace(f"\\{letter}", f"\\\\{letter}")
+    promptStudent = re.sub(r'`solidityFile`', file_content, promptStudent)
     # print(promptStudent.__len__(), file_path)
     resStudent = chatWithDeespseek(promptStudent, student_message)
     return resStudent
@@ -189,6 +205,37 @@ def setList(lst):
             resMap[str] = 1
     return res
 
+def pre_process(file_path,mainContract):
+    slither = Slither(file_path)
+    res_contract = []
+    # for contract in slither.contracts:
+    #     if(contract.name == mainContract):
+    #         res_contract.append(contract)
+    #         break
+    # i = 0
+    # while(i < res_contract.__len__()):
+    #     tar_contract = res_contract[i]
+    #     for inheritance in tar_contract.inheritance:
+    #         res_contract.append(inheritance)
+    #     i += 1
+    #     if(res_contract.__len__() > slither.contracts.__len__()):
+    #         break
+    # res_contract = set(list(res_contract))
+
+    for contract in slither.contracts:
+        if(contract.contract_kind != 'library' and contract.contract_kind != 'interface'):
+            res_contract.append(contract)
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    res_str = ""
+    for contract in res_contract:
+        if contract.source_mapping is not None:
+            source_mapping_lines = contract.source_mapping.lines
+            for line in source_mapping_lines:
+                if (line - 1 < lines.__len__()):
+                    res_str += lines[line - 1]
+    return res_str
+
 
 def generateSequenceFromDeepseek(tmpDir,filename,student_message,mainContract):
     # freeze_support()  # 在 Windows 或 macOS 上需要调用
@@ -212,15 +259,12 @@ def generateSequenceFromDeepseek(tmpDir,filename,student_message,mainContract):
         file_path = os.path.join(datasetDir, filename)  # 获取每个文件的完整路径
         with open(file_path, 'r', encoding='utf-8') as file:
             file_content = file.read()  # 读取文件内容
-        # student_message = []
-
+        student_message = []
+        # file_content = pre_process(file_path,mainContract)
         ###这个agent会自动把deepseek的回答放在message聊天记录里面
-        deal_findBlock(file_content, student_message,mainContract)
-        # summary(file_content,res1,stuMes)
-        # func = dealJson(res1,"_sell")
-        res2 = deal_reachStatement_if(student_message)
-        # print(res2)
-        # res3 = deal_reachStatement_function(student_message)
+        # deal_findBlock(file_content, student_message,mainContract)
+        # res2 = deal_reachStatement_if(student_message)
+        res2 = deal_llm_random(file_content,student_message)
         ###把结果输出出去
         output_file = filename.replace(".sol","_output.txt")
         output = os.path.join(output_directory,output_file)

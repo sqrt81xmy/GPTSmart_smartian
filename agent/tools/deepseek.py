@@ -12,6 +12,7 @@ async def chatWithMessages(content,messages):
         {"role": "user", "content": content}
     )
     client = OpenAI(api_key=key, base_url="https://api.deepseek.com")
+    # print(messages)
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=messages,

@@ -93,14 +93,17 @@ def dealHexParam(normalFuncsT,value,i,elemInd=None):
     # print(str)
     if (str.__len__() % 2 == 1):
         str = "0" + str
-    address_bytes = bytes.fromhex(str)  # 去掉 0x 前缀并转换为字节数组
+    try:
+        address_bytes = bytes.fromhex(str)  # 去掉 0x 前缀并转换为字节数组
+    except Exception as e:
+        return
     address_bytes = address_bytes[::-1]
     for j in range(normalFuncsT['Args'][i + 1]['Elems'][0]['ByteVals'].__len__()):
         if j >= address_bytes.__len__():
             break
         # print(i,j,normalFuncsT['Args'][i+1]['Elems'][0]['ByteVals'].__len__(),address_bytes.__len__())
         # 把第一个位置给空出来
-        if (elemInd != None):
+        if (elemInd != None and elemInd < normalFuncsT['Args'][i + 1]['Elems'].__len__()):
             normalFuncsT['Args'][i + 1]['Elems'][elemInd]['ByteVals'][j]['Fields'][0] = address_bytes[j]
             # print(amount_bytes.__len__(), normalFuncsT['Args'][i + 1]['Elems'][0]['ByteVals'][j]['Fields'].__len__(),j,i,amount_bytes[j],normalFuncsT['Args'][i+1]['Elems'][0]['ByteVals'][j]['Fields'][0])
         else:
@@ -120,13 +123,38 @@ def dealIntegerParam(normalFuncsT,value,i,elemInd=None):
         'ByteVals'].__len__())  # 转换为 32 字节的小端序字节数组
 
     for j in range(amount_bytes.__len__()):
-        if (elemInd != None):
+        if (elemInd != None and elemInd < normalFuncsT['Args'][i + 1]['Elems'].__len__()):
             normalFuncsT['Args'][i + 1]['Elems'][elemInd]['ByteVals'][j]['Fields'][0] = amount_bytes[j]
         else:
             normalFuncsT['Args'][i + 1]['Elems'][0]['ByteVals'][j]['Fields'][0] = amount_bytes[j]
 
 def setParams(input_str, normalFuncsT):
+    if (input_str['msgSender'].startswith("0x")):
+        # 去掉 "0x" 前缀
+        address_without_prefix = input_str['msgSender'][2:]
+        # 将所有大写字母转换为小写字母
+        input_str['msgSender'] = address_without_prefix.lower()
+        normalFuncsT['Sender']['Case'] = "CustomUser"
+        normalFuncsT['Sender']['name'] = input_str['msgSender']
+        ###处理msg.sender和msg.value
+    else:
+        if input_str['msgSender'] == "TARG_CONTRACT":
+            input_str['msgSender'] = "TargetOwner"
+        if input_str['msgSender'] not in msgSender:
+            input_str['msgSender'] = "NormalUser1"
+        normalFuncsT['Sender']['Case'] = input_str['msgSender']
+    normalFuncsT['UseAgent'] = "false"
+    try:
+        amount = int(input_str['msgValue'])  # 数量
+    except Exception as e:
+        amount = 0
+    amount_bytes = to_little_endian_bytes(amount, normalFuncsT['Args'][0]['Elems'][0][
+        'ByteVals'].__len__())  # 转换为 32 字节的小端序字节数组
+    for j in range(amount_bytes.__len__()):
+        normalFuncsT['Args'][0]['Elems'][0]['ByteVals'][j]['Fields'][0] = amount_bytes[j]
+
     # 使用正则表达式提取括号内的内容
+    resParams = []
     match = re.match(r'.*\((.*)\)', input_str['functionName'])
     if match:
         # 提取括号内的参数
@@ -171,30 +199,8 @@ def setParams(input_str, normalFuncsT):
         else:
             # 处理数量
             dealIntegerParam(normalFuncsT,params[i],i)
-    if(input_str['msgSender'].startswith("0x")):
-        # 去掉 "0x" 前缀
-        address_without_prefix = input_str['msgSender'][2:]
-        # 将所有大写字母转换为小写字母
-        input_str['msgSender'] = address_without_prefix.lower()
-        normalFuncsT['Sender']['Case'] = "CustomUser"
-        normalFuncsT['Sender']['name'] = input_str['msgSender']
-    ###处理msg.sender和msg.value
-    else:
-        if input_str['msgSender'] == "TARG_CONTRACT":
-            input_str['msgSender'] = "TargetOwner"
-        if input_str['msgSender'] not in msgSender:
-            input_str['msgSender'] = "NormalUser1"
-        normalFuncsT['Sender']['Case'] = input_str['msgSender']
-    normalFuncsT['UseAgent'] = "false"
-    try:
-        amount = int(input_str['msgValue'])  # 数量
-    except Exception as e:
-        amount = 0
-    amount_bytes = to_little_endian_bytes(amount, normalFuncsT['Args'][0]['Elems'][0][
-        'ByteVals'].__len__())  # 转换为 32 字节的小端序字节数组
-    for j in range(amount_bytes.__len__()):
-        normalFuncsT['Args'][0]['Elems'][0]['ByteVals'][j]['Fields'][0] = amount_bytes[j]
 
+    return params
 
 
 def getSeedFromSeq(Seq,file_name,mainContract,normalFuncsDir):
@@ -204,9 +210,10 @@ def getSeedFromSeq(Seq,file_name,mainContract,normalFuncsDir):
     # json_path = 'a.json'  # 替换为实际的文件路径
     data = read_json_file(json_path)
     # print(file_name)
-    if data == None:
+    if data is None:
         return None
-
+    if len(Seq) == 0:
+        return None
     seed = {}
     flag = 0
     i = 0
@@ -364,8 +371,8 @@ def GPT2SmartianSeed(data,file_name,datasetDir,mainContract):
     #     except Exception as e:
     #         print(f"An error occurred: {e}")
     #         continue
-    seedDir = os.path.join(datasetDir, "seed")
-    normalFuncsDir = os.path.join(datasetDir, "normalFuncs")
+    seedDir = os.path.join(datasetDir, "new_seed2")
+    normalFuncsDir = os.path.join(datasetDir, "outputdd0121")
     print("normalFuncsDir",normalFuncsDir)
     if os.path.exists(seedDir) == False:
         os.mkdir(seedDir)
@@ -385,14 +392,20 @@ def GPT2SmartianSeed(data,file_name,datasetDir,mainContract):
     #     mainContract_map[key] = value
     # filenameTag = file_name.replace(".sol", "")
     # mainContract = mainContract_map[filenameTag]
+    nullSeed = None
     for i in range(array.__len__()):
         array[i] = setList(array[i])
         for seq in array[i]:
             seed = getSeedFromSeq(seq,file_name,mainContract,normalFuncsDir)
             # print(seed1['Transactions'].__len__())
             print(seed)
-            if seed == None or seed['Transactions'].__len__() == 1:
+            if seed == None: #or seed['Transactions'].__len__() == 1:
+                continue
+            if seed['Transactions'].__len__() == 1:
+                nullSeed = seed
                 continue
             seeds.append(seed)
             ##把Seed写入文件中
+    if(seeds.__len__() == 0):
+        seeds.append(nullSeed)
     write_seeds(file_name, seeds,seedDir)

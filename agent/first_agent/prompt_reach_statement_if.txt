@@ -32,10 +32,14 @@ second, you should design the `msg.value` as another parameter, if the function 
 third, you should design the `msg.sender` as another parameter, you can choose the value from these four values, which is `NormalUser1,NormalUser2,NormalUser3,TargetOwner`,
 but, REMEMBER, if you find the `owner` or `Owner` definition in the constructor, just use it instead of `TargetOwner` to satisfy the `onlyOwner` condition when you need, which is `msg.sender == owner`,
 but if you use the value not in the `NormalUser1,NormalUser2,NormalUser3,TargetOwner`, just to make sure this value should be a hexadecimal value starts with the `0x`.
+
 2.Now you need to check for each statement if there is function call before the statement,
 if there is a function call, you need to make sure that the called function executes and returns correctly without crashing.
 which means you should also read the called function code, and make sure it can execute without error or revert by designing which may add other functions,
 but you can do nothing if it can execute without error.
+
+3.Then you need to check the modifier of the function, please read the modifier code and see how to design the function sequence or the parameters and the transaction parameters
+to meet the conditions in the modifier.
 
 You should check each `require` and `alert` statement in the called function, and you should make sure that you satisfy the condition in these statements.
 You should remember each state variable's initial value is 0, including the array. And each state variable of bool type is `false`.

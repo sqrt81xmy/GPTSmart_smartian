@@ -1,0 +1,1048 @@
+{
+  "res": [
+    {
+      "functionName": "transferOwnership",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transferOwnership(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "First, initialize the contract with the constructor function to set the owner. Then, call transferOwnership with the owner as msg.sender to transfer ownership to NormalUser1."
+      ]
+    },
+    {
+      "functionName": "setCEO",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setCEO(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setCEO with the owner as msg.sender to set NormalUser1 as the new CEO."
+      ]
+    },
+    {
+      "functionName": "setCFO",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setCFO(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setCFO with the owner as msg.sender to set NormalUser1 as the new CFO."
+      ]
+    },
+    {
+      "functionName": "setCOO",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setCOO(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setCOO with the owner as msg.sender to set NormalUser1 as the new COO."
+      ]
+    },
+    {
+      "functionName": "pause",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "pause()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call pause with the owner as msg.sender to pause the contract."
+      ]
+    },
+    {
+      "functionName": "unpause",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "pause()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "unpause()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Pause the contract first, then call unpause with the owner as msg.sender to unpause the contract."
+      ]
+    },
+    {
+      "functionName": "_transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call transfer from NormalUser1 to transfer the kitty to NormalUser2."
+      ]
+    },
+    {
+      "functionName": "_createKitty",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call _createKitty with the owner as msg.sender to create a new kitty owned by NormalUser1."
+      ]
+    },
+    {
+      "functionName": "setSecondsPerBlock",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setSecondsPerBlock(15)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setSecondsPerBlock with the owner as msg.sender to set the seconds per block."
+      ]
+    },
+    {
+      "functionName": "setMetadataAddress",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setMetadataAddress(TARG_CONTRACT)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setMetadataAddress with the owner as msg.sender to set the metadata address to the contract itself."
+      ]
+    },
+    {
+      "functionName": "_owns",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_owns(NormalUser1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _owns from NormalUser1 to check if NormalUser1 owns the kitty."
+      ]
+    },
+    {
+      "functionName": "_approvedFor",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "_approvedFor(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Approve NormalUser2 to transfer the kitty. Then, call _approvedFor from NormalUser2 to check if NormalUser2 is approved for the kitty."
+      ]
+    },
+    {
+      "functionName": "_approve",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_approve(1, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _approve from NormalUser1 to approve NormalUser2 for the kitty."
+      ]
+    },
+    {
+      "functionName": "balanceOf",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "balanceOf(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call balanceOf from NormalUser1 to check the balance of NormalUser1."
+      ]
+    },
+    {
+      "functionName": "transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "transfer(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call transfer from NormalUser1 to transfer the kitty to NormalUser2."
+      ]
+    },
+    {
+      "functionName": "approve",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call approve from NormalUser1 to approve NormalUser2 for the kitty."
+      ]
+    },
+    {
+      "functionName": "transferFrom",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approve(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "transferFrom(NormalUser1, NormalUser3, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser2"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Approve NormalUser2 to transfer the kitty. Then, call transferFrom from NormalUser2 to transfer the kitty from NormalUser1 to NormalUser3."
+      ]
+    },
+    {
+      "functionName": "totalSupply",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "totalSupply()",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call totalSupply from NormalUser1 to get the total supply of kitties."
+      ]
+    },
+    {
+      "functionName": "ownerOf",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "ownerOf(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call ownerOf from NormalUser1 to get the owner of the kitty."
+      ]
+    },
+    {
+      "functionName": "tokensOfOwner",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "tokensOfOwner(NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call tokensOfOwner from NormalUser1 to get the tokens owned by NormalUser1."
+      ]
+    },
+    {
+      "functionName": "tokenMetadata",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setMetadataAddress(TARG_CONTRACT)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "tokenMetadata(1, 'preferredTransport')",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Set the metadata address to the contract itself. Then, call tokenMetadata from NormalUser1 to get the metadata of the kitty."
+      ]
+    },
+    {
+      "functionName": "setGeneScienceAddress",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setGeneScienceAddress(TARG_CONTRACT)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setGeneScienceAddress with the owner as msg.sender to set the gene science address to the contract itself."
+      ]
+    },
+    {
+      "functionName": "_isReadyToBreed",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_isReadyToBreed(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _isReadyToBreed from NormalUser1 to check if the kitty is ready to breed."
+      ]
+    },
+    {
+      "functionName": "_isSiringPermitted",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_isSiringPermitted(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call _isSiringPermitted from NormalUser1 to check if siring is permitted between the two kitties."
+      ]
+    },
+    {
+      "functionName": "_triggerCooldown",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_triggerCooldown(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _triggerCooldown from NormalUser1 to trigger the cooldown for the kitty."
+      ]
+    },
+    {
+      "functionName": "approveSiring",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "approveSiring(NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call approveSiring from NormalUser1 to approve NormalUser2 for siring with the kitty."
+      ]
+    },
+    {
+      "functionName": "setAutoBirthFee",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "setAutoBirthFee(2 finney)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Then, call setAutoBirthFee with the owner as msg.sender to set the auto birth fee."
+      ]
+    },
+    {
+      "functionName": "_isReadyToGiveBirth",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_isReadyToGiveBirth(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _isReadyToGiveBirth from NormalUser1 to check if the kitty is ready to give birth."
+      ]
+    },
+    {
+      "functionName": "isReadyToBreed",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "isReadyToBreed(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call isReadyToBreed from NormalUser1 to check if the kitty is ready to breed."
+      ]
+    },
+    {
+      "functionName": "isPregnant",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "isPregnant(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call isPregnant from NormalUser1 to check if the kitty is pregnant."
+      ]
+    },
+    {
+      "functionName": "_isValidMatingPair",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_isValidMatingPair(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call _isValidMatingPair from NormalUser1 to check if the two kitties are a valid mating pair."
+      ]
+    },
+    {
+      "functionName": "_canBreedWithViaAuction",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_canBreedWithViaAuction(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call _canBreedWithViaAuction from NormalUser1 to check if the two kitties can breed via auction."
+      ]
+    },
+    {
+      "functionName": "canBreedWith",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "canBreedWith(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call canBreedWith from NormalUser1 to check if the two kitties can breed."
+      ]
+    },
+    {
+      "functionName": "_breedWith",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_breedWith(1, 2)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call _breedWith from NormalUser1 to breed the two kitties."
+      ]
+    },
+    {
+      "functionName": "breedWithAuto",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "breedWithAuto(1, 2)",
+            "msgValue": 2 finney,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Then, call breedWithAuto from NormalUser1 with the required fee to breed the two kitties automatically."
+      ]
+    },
+    {
+      "functionName": "giveBirth",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser2)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "breedWithAuto(1, 2)",
+            "msgValue": 2 finney,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "giveBirth(1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create two new kitties owned by NormalUser1 and NormalUser2. Breed the two kitties automatically. Then, call giveBirth from NormalUser1 to give birth to a new kitty."
+      ]
+    },
+    {
+      "functionName": "_owns",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_owns(NormalUser1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _owns from NormalUser1 to check if NormalUser1 owns the kitty."
+      ]
+    },
+    {
+      "functionName": "_escrow",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_escrow(NormalUser1, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _escrow from NormalUser1 to escrow the kitty."
+      ]
+    },
+    {
+      "functionName": "_transfer",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_transfer(NormalUser1, NormalUser2, 1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _transfer from NormalUser1 to transfer the kitty to NormalUser2."
+      ]
+    },
+    {
+      "functionName": "_addAuction",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_addAuction(1, Auction(NormalUser1, 100, 100, 1, now))",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Then, call _addAuction from NormalUser1 to add an auction for the kitty."
+      ]
+    },
+    {
+      "functionName": "_cancelAuction",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_addAuction(1, Auction(NormalUser1, 100, 100, 1, now))",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          },
+          {
+            "functionName": "_cancelAuction(1, NormalUser1)",
+            "msgValue": 0,
+            "msgSender": "NormalUser1"
+          }
+        ]
+      ],
+      "reason": [
+        "Initialize the contract with the constructor function to set the owner. Create a new kitty owned by NormalUser1. Add an auction for the kitty. Then, call _cancelAuction from NormalUser1 to cancel the auction."
+      ]
+    },
+    {
+      "functionName": "_bid",
+      "sequences": [
+        [
+          {
+            "functionName": "KittyCore()",
+            "msgValue": 0,
+            "msgSender": "TargetOwner"
+          },
+          {
+            "functionName": "_createKitty(0, 0, 0, 0

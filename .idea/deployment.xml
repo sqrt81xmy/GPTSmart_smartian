@@ -37,6 +37,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="mingyue@192.168.111.22:60022 agent (5)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="mingyue@504.lockearth.com:60023 password">
         <serverdata>
           <mappings>
