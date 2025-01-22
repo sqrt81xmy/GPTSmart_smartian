@@ -112,6 +112,9 @@ if __name__ == "__main__":
         key, value = line.strip().split(",")
         mainContract_map[key] = value
     filenameTag = filename.replace(".sol", "")
+    filenameTag = filenameTag.split("/")
+    filenameTag = filenameTag[-1]
+    filename = filenameTag + ".sol"
     mainContract = mainContract_map[filenameTag]
     ###TODO: get normalFuncs 这个可以提前生成
     '''
