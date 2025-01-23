@@ -21,7 +21,7 @@ def deal_smartian_fuzzer(data,filename,tmpDir,mainContract,datasetName,outputDir
         binName = filename.replace(".sol", ".bin")
         binDir = os.path.join(smartian_datasetDir,"bin")
         binPath = os.path.join(binDir,binName)
-        cmd = "dotnet workload update"
+        cmd = "sudo dotnet workload update"
         cmd_str_build = "dotnet build /home/test/tools/GPTSmart_smartian/Smartian/src/Smartian.fsproj"
         cmd_str_exec = "dotnet /home/test/tools/GPTSmart_smartian/Smartian/src/bin/Debug/net8.0/Smartian.dll fuzz " \
                        " -p " + binPath + " -a " + abiPath + " -s " + seedDir + \
